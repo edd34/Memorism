@@ -20,8 +20,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ceate_journey"
-            android:label="@string/title_activity_ceate_journey"
+            android:name=".create_journey"
+            android:label="@string/title_activity_create_journey"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
