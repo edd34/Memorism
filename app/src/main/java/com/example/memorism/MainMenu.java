@@ -80,11 +80,11 @@ public class MainMenu extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.create_journey) {
+        if (id == R.id.nav_create_journey) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_edit_journey) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_list_places) {
 
         } else if (id == R.id.nav_share) {
 
