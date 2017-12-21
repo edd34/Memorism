@@ -81,13 +81,13 @@ public class MainMenu extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_create_journey) {
+        if (id == R.id.nav_create_memory) {
             // Handle the camera action
             Intent intent = new Intent(this,create_journey.class);
             startActivity(intent);
 
 
-        } else if (id == R.id.nav_edit_journey) {
+        } else if (id == R.id.nav_edit_memory) {
 
         } else if (id == R.id.nav_list_places) {
 

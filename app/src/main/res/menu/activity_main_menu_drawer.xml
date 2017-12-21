@@ -5,13 +5,13 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_create_journey"
-            android:icon="@drawable/ic_flight_black_24dp"
-            android:title="Create a journey" />
+            android:id="@+id/nav_create_memory"
+            android:icon="@drawable/ic_note_add_black_24dp"
+            android:title="Create a memory" />
         <item
-            android:id="@+id/nav_edit_journey"
+            android:id="@+id/nav_edit_memory"
             android:icon="@drawable/ic_card_travel_black_24dp"
-            android:title="Edit a journey" />
+            android:title="Edit a memory" />
         <item
             android:id="@+id/nav_list_places"
             android:icon="@drawable/ic_format_list_bulleted_black_24dp"
