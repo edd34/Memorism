@@ -19,6 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ceate_journey"
+            android:label="@string/title_activity_ceate_journey"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
