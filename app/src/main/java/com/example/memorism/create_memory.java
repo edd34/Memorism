@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class create_journey extends AppCompatActivity {
+public class create_memory extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -83,13 +83,17 @@ public class MainMenu extends AppCompatActivity
 
         if (id == R.id.nav_create_memory) {
             // Handle the camera action
-            Intent intent = new Intent(this,create_journey.class);
+            Intent intent = new Intent(this,create_memory.class);
             startActivity(intent);
 
 
         } else if (id == R.id.nav_edit_memory) {
 
         } else if (id == R.id.nav_list_places) {
+
+        } else if (id == R.id.nav_show_map) {
+            Intent intent = new Intent(this,Show_Map.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_share) {
 
