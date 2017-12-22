@@ -90,7 +90,8 @@ public class MainMenu extends AppCompatActivity
         } else if (id == R.id.nav_edit_memory) {
 
         } else if (id == R.id.nav_list_places) {
-
+            Intent intent = new Intent(this,ItemListActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_show_map) {
             Intent intent = new Intent(this,Show_Map.class);
             startActivity(intent);
