@@ -38,8 +38,9 @@ public class DummyContent {
     }
 
     public static void removeItem(DummyItem item) {
-        ITEMS.add(item);
-        ITEM_MAP.put(item.id, item);
+        ITEMS.remove(item);
+        ITEM_MAP.remove(item.id,item);
+        //ITEM_MAP.put(item.id, item);
     }
 
     private static DummyItem createDummyItem(int position) {
