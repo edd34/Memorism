@@ -37,8 +37,8 @@ public class create_memory extends AppCompatActivity {
 
                 DummyContent.addItem(tmp_dummy);
 
-                /*Snackbar.make(view, "Memory saved !", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();*/
+                Snackbar.make(view, "Memory "+memory_string_value + " saved !", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
 
 
 
