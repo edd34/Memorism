@@ -14,6 +14,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.memorism.dummy.DummyContent;
+
 public class MainMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -90,8 +92,18 @@ public class MainMenu extends AppCompatActivity
         } else if (id == R.id.nav_edit_memory) {
 
         } else if (id == R.id.nav_list_places) {
-            Intent intent = new Intent(this,ItemListActivity.class);
+
+            Intent intent;
+            if(DummyContent.ITEMS.size()==0)
+            {
+                intent = new Intent(this,create_memory.class);
+            }else
+            {
+                intent = new Intent(this,ItemListActivity.class);
+            }
             startActivity(intent);
+
+
         } else if (id == R.id.nav_show_map) {
             Intent intent = new Intent(this,Show_Map.class);
             startActivity(intent);
