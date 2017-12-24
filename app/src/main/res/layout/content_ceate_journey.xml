@@ -33,10 +33,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <android.support.design.widget.TextInputEditText
+        <EditText
+            android:id="@+id/memory_input_string"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Which memory is it ?" />
+            android:hint="What is your memory ?"
+            android:inputType="text"/>
     </android.support.design.widget.TextInputLayout>
 
 
@@ -63,10 +65,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/memory_input">
 
-        <android.support.design.widget.TextInputEditText
+        <EditText
+            android:id="@+id/detail_input_string"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="What are the detail ?" />
+            android:hint="Give some details !"
+            android:inputType="text"/>
     </android.support.design.widget.TextInputLayout>
 
 </android.support.constraint.ConstraintLayout>

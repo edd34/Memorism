@@ -25,11 +25,12 @@ public class create_memory extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                EditText text = (EditText)findViewById(R.id.detail_input);
+                EditText text = (EditText)findViewById(R.id.memory_input_string);
+                String memory_string_value= text.getText().toString();
+
+                text = (EditText)findViewById(R.id.detail_input_string);
                 String detail_string_value = text.getText().toString();
 
-                text = (EditText)findViewById(R.id.memory_input);
-                String memory_string_value = text.getText().toString();
                 String new_id = String.valueOf(DummyContent.ITEMS.size());
 
                 DummyContent.DummyItem tmp_dummy = new DummyContent.DummyItem(new_id,memory_string_value,detail_string_value);
