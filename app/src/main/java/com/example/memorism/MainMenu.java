@@ -92,7 +92,8 @@ public class MainMenu extends AppCompatActivity
 
 
         } else if (id == R.id.nav_edit_memory) {
-
+            Intent intent = new Intent(this,take_photo.class);
+            startActivity(intent);
         } else if (id == R.id.nav_list_places) {
 
             Intent intent;
