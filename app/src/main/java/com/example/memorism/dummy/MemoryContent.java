@@ -34,13 +34,13 @@ public class MemoryContent {
 
     public static void addItem(DummyItem item) {
         ITEMS.add(item);
-        ITEM_MAP.put(item.id, item);
+        ITEM_MAP.put(item.date, item);
     }
 
     public static void removeItem(DummyItem item) {
         ITEMS.remove(item);
-        ITEM_MAP.remove(item.id,item);
-        //ITEM_MAP.put(item.id, item);
+        ITEM_MAP.remove(item.date,item);
+        //ITEM_MAP.put(item.date, item);
     }
 
     private static DummyItem createDummyItem(int position) {
@@ -60,12 +60,12 @@ public class MemoryContent {
      * A dummy item representing a piece of content.
      */
     public static class DummyItem {
-        public final String id;
+        public final String date;
         public final String content;
         public final String details;
 
-        public DummyItem(String id, String content, String details) {
-            this.id = id;
+        public DummyItem(String date, String content, String details) {
+            this.date = date;
             this.content = content;
             this.details = details;
         }
