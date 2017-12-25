@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBar;
 import android.view.MenuItem;
 
 import com.example.memorism.dummy.DummyContent;
+import com.example.memorism.ItemDetailFragment;
 
 /**
  * An activity representing a single Item detail screen. This
@@ -28,10 +29,15 @@ public class ItemDetailActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        final Intent intent = new Intent(this,MainMenu.class);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //DummyContent.removeItem();
+
+                DummyContent.removeItem(ItemDetailFragment.mItem);
+
+                startActivity(intent);
+
             }
         });
 
