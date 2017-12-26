@@ -31,7 +31,7 @@ public class create_memory extends AppCompatActivity {
                                                      public boolean onLongClick(View v) {
                                                          Snackbar.make(v, "you have clicked the picture !", Snackbar.LENGTH_LONG)
                                                                  .setAction("Action", null).show();
-                                                     return false;
+                                                     return true;
                                                      }
                                                  }
 
