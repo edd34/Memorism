@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.example.memorism.memory.MemoryContent;
 
@@ -23,6 +24,27 @@ public class create_memory extends AppCompatActivity {
         setContentView(R.layout.activity_ceate_journey);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        ImageView take_show_picture = (ImageView) findViewById(R.id.take_picture_view);
+        take_show_picture.setOnLongClickListener(new View.OnLongClickListener() {
+                                                     @Override
+                                                     public boolean onLongClick(View v) {
+                                                         Snackbar.make(v, "you have clicked the picture !", Snackbar.LENGTH_LONG)
+                                                                 .setAction("Action", null).show();
+                                                     return false;
+                                                     }
+                                                 }
+
+
+        );
+
+        take_show_picture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v, "Long press to launch the camera !", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.quick_add_memory);
         fab.setOnClickListener(new View.OnClickListener() {
