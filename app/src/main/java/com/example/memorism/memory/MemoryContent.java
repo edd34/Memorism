@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Helper class for providing sample content for user interfaces created by
+ * Helper class for providing sample title for user interfaces created by
  * Android template wizards.
  * <p>
  * TODO: Replace all uses of this class before publishing your app.
@@ -57,22 +57,22 @@ public class MemoryContent {
     }
 
     /**
-     * A dummy item representing a piece of content.
+     * A dummy item representing a piece of title.
      */
     public static class MemoryItem {
         public final String date;
-        public final String content;
+        public final String title;
         public final String details;
 
-        public MemoryItem(String date, String content, String details) {
+        public MemoryItem(String date, String title, String details) {
             this.date = date;
-            this.content = content;
+            this.title = title;
             this.details = details;
         }
 
         @Override
         public String toString() {
-            return content;
+            return title;
         }
     }
 }
