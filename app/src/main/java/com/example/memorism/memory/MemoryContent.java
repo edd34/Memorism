@@ -16,12 +16,12 @@ public class MemoryContent {
     /**
      * An array of sample (dummy) items.
      */
-    public static final List<DummyItem> ITEMS = new ArrayList<DummyItem>();
+    public static final List<MemoryItem> ITEMS = new ArrayList<MemoryItem>();
 
     /**
      * A map of sample (dummy) items, by ID.
      */
-    public static final Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
+    public static final Map<String, MemoryItem> ITEM_MAP = new HashMap<String, MemoryItem>();
 
     private static final int COUNT = 25;
 
@@ -32,19 +32,19 @@ public class MemoryContent {
         }*/
     }
 
-    public static void addItem(DummyItem item) {
+    public static void addItem(MemoryItem item) {
         ITEMS.add(item);
         ITEM_MAP.put(item.date, item);
     }
 
-    public static void removeItem(DummyItem item) {
+    public static void removeItem(MemoryItem item) {
         ITEMS.remove(item);
         ITEM_MAP.remove(item.date,item);
         //ITEM_MAP.put(item.date, item);
     }
 
-    private static DummyItem createDummyItem(int position) {
-        return new DummyItem(String.valueOf(position), "Item " + position, makeDetails(position));
+    private static MemoryItem createDummyItem(int position) {
+        return new MemoryItem(String.valueOf(position), "Item " + position, makeDetails(position));
     }
 
     private static String makeDetails(int position) {
@@ -59,12 +59,12 @@ public class MemoryContent {
     /**
      * A dummy item representing a piece of content.
      */
-    public static class DummyItem {
+    public static class MemoryItem {
         public final String date;
         public final String content;
         public final String details;
 
-        public DummyItem(String date, String content, String details) {
+        public MemoryItem(String date, String content, String details) {
             this.date = date;
             this.content = content;
             this.details = details;

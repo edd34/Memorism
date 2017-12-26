@@ -27,7 +27,7 @@ public class ItemDetailFragment extends Fragment {
     /**
      * The dummy content this fragment is presenting.
      */
-    public static MemoryContent.DummyItem mItem;
+    public static MemoryContent.MemoryItem mItem;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the

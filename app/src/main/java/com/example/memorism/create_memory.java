@@ -32,7 +32,7 @@ public class create_memory extends AppCompatActivity {
 
                 String new_id = String.valueOf(MemoryContent.ITEMS.size());
 
-                MemoryContent.DummyItem tmp_dummy = new MemoryContent.DummyItem(new_id,memory_string_value,detail_string_value);
+                MemoryContent.MemoryItem tmp_dummy = new MemoryContent.MemoryItem(new_id,memory_string_value,detail_string_value);
 
                 MemoryContent.addItem(tmp_dummy);
 

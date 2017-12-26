@@ -74,12 +74,12 @@ public class ItemListActivity extends AppCompatActivity {
             extends RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder> {
 
         private final ItemListActivity mParentActivity;
-        private final List<MemoryContent.DummyItem> mValues;
+        private final List<MemoryContent.MemoryItem> mValues;
         private final boolean mTwoPane;
         private final View.OnClickListener mOnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MemoryContent.DummyItem item = (MemoryContent.DummyItem) view.getTag();
+                MemoryContent.MemoryItem item = (MemoryContent.MemoryItem) view.getTag();
                 if (mTwoPane) {
                     Bundle arguments = new Bundle();
                     arguments.putString(ItemDetailFragment.ARG_ITEM_ID, item.date);
@@ -99,7 +99,7 @@ public class ItemListActivity extends AppCompatActivity {
         };
 
         SimpleItemRecyclerViewAdapter(ItemListActivity parent,
-                                      List<MemoryContent.DummyItem> items,
+                                      List<MemoryContent.MemoryItem> items,
                                       boolean twoPane) {
             mValues = items;
             mParentActivity = parent;
