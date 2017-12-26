@@ -1,4 +1,4 @@
-package com.example.memorism.dummy;
+package com.example.memorism.memory;
 
 import java.util.ArrayList;
 import java.util.HashMap;

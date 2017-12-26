@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBar;
 import android.view.MenuItem;
 
-import com.example.memorism.dummy.MemoryContent;
+import com.example.memorism.memory.MemoryContent;
 
 /**
  * An activity representing a single Item detail screen. This

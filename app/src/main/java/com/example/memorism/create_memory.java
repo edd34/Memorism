@@ -8,7 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 
-import com.example.memorism.dummy.MemoryContent;
+import com.example.memorism.memory.MemoryContent;
 
 public class create_memory extends AppCompatActivity {
 

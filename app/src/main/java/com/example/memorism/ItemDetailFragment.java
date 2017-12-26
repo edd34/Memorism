@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.memorism.dummy.MemoryContent;
+import com.example.memorism.memory.MemoryContent;
 
 /**
  * A fragment representing a single Item detail screen.

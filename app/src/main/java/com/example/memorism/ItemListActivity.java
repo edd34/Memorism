@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-import com.example.memorism.dummy.MemoryContent;
+import com.example.memorism.memory.MemoryContent;
 
 import java.util.List;
 
