@@ -37,22 +37,29 @@ public class MemoryContent {
         ITEM_MAP.put(item.date, item);
     }
 
+    public static void addItem(String date, String title, String details,float positionX, float positionY) {
+        MemoryItem tmp = new MemoryItem(date,title,details,positionX,positionY);
+        ITEMS.add(tmp);
+        ITEM_MAP.put(tmp.date, tmp);
+    }
+
     public static void removeItem(MemoryItem item) {
         ITEMS.remove(item);
         ITEM_MAP.remove(item.date,item);
-        //ITEM_MAP.put(item.date, item);
     }
 
-    private static MemoryItem createDummyItem(int position) {
-        return new MemoryItem(String.valueOf(position), "Item " + position, makeDetails(position));
-    }
-
-    private static String makeDetails(int position) {
+    public static String makeDetails(MemoryItem item) {
         StringBuilder builder = new StringBuilder();
-        builder.append("Details about Item: ").append(position);
-        for (int i = 0; i < position; i++) {
-            builder.append("\nMore details information here.");
-        }
+        builder.append("The name of your memory is\"")
+                .append(item.title)
+                .append("\". \n\nThe date (yyyyMMdd_HHMMSS) is \"")
+                .append(item.date)
+                .append("\". \n\nThe position GPS is (")
+                .append(item.positionX)
+                .append(",")
+                .append(item.positionY)
+                .append("). \n\nAnd here are the detail : ")
+                .append(item.details);
         return builder.toString();
     }
 
@@ -63,11 +70,15 @@ public class MemoryContent {
         public final String date;
         public final String title;
         public final String details;
+        public final float positionX;
+        public final float positionY;
 
-        public MemoryItem(String date, String title, String details) {
+        public MemoryItem(String date, String title, String details,float positionX, float positionY) {
             this.date = date;
             this.title = title;
             this.details = details;
+            this.positionX = positionX;
+            this.positionY = positionY;
         }
 
         @Override

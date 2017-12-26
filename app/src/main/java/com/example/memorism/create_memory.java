@@ -10,7 +10,12 @@ import android.widget.EditText;
 
 import com.example.memorism.memory.MemoryContent;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class create_memory extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +35,9 @@ public class create_memory extends AppCompatActivity {
                 text = (EditText)findViewById(R.id.detail_input_string);
                 String detail_string_value = text.getText().toString();
 
-                String new_id = String.valueOf(MemoryContent.ITEMS.size());
+                String new_id = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 
-                MemoryContent.MemoryItem tmp_dummy = new MemoryContent.MemoryItem(new_id,memory_string_value,detail_string_value);
+                MemoryContent.MemoryItem tmp_dummy = new MemoryContent.MemoryItem(new_id,memory_string_value,detail_string_value,misc_funct.randomNumberposXY(-90,90),misc_funct.randomNumberposXY(-180,180));
 
                 MemoryContent.addItem(tmp_dummy);
 
