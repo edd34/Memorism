@@ -1,13 +1,18 @@
 package com.example.memorism;
 
+import android.Manifest;
+import android.app.Activity;
+import android.location.Location;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.memorism.memory.MemoryContent;
 
@@ -22,6 +27,8 @@ public class create_memory extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ceate_journey);
+        ActivityCompat.requestPermissions(create_memory.this,new String[]{
+            Manifest.permission.ACCESS_FINE_LOCATION},123);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -41,8 +48,15 @@ public class create_memory extends AppCompatActivity {
         take_show_picture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar.make(v, "Long press to launch the camera !", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                GPStracker g = new GPStracker(getApplicationContext());
+                Location l = g.getLocation();
+                if(l != null)
+                {
+                    double lat = l.getLatitude();
+                    double lon = l.getLongitude();
+                    Toast.makeText(getApplicationContext(), "LAT:"+lat+"\nLon"+lon, Toast.LENGTH_LONG).show();
+                }
+
             }
         });
 
