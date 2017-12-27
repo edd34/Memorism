@@ -18,16 +18,20 @@ import com.example.memorism.memory.MemoryContent;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.UUID;
 
 public class create_memory extends AppCompatActivity {
 
     double lat;
     double lon;
 
+    public static String new_id = UUID.randomUUID().toString();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ceate_journey);
+        new_id = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(new Date());
         ActivityCompat.requestPermissions(create_memory.this,new String[]{
                 Manifest.permission.ACCESS_FINE_LOCATION},123);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -73,7 +77,7 @@ public class create_memory extends AppCompatActivity {
                     text = (EditText)findViewById(R.id.detail_input_string);
                     String detail_string_value = text.getText().toString();
 
-                    String new_id = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(new Date());
+
 
                     MemoryContent.MemoryItem tmp_dummy = new MemoryContent.MemoryItem(new_id,memory_string_value,detail_string_value,lat,lon);
 
