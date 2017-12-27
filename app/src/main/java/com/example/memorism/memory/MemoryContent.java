@@ -81,6 +81,14 @@ public class MemoryContent {
             this.longitude = longitude;
         }
 
+        public MemoryItem() {
+            this.date = "today";
+            this.title = "title";
+            this.details = "details";
+            this.latitude = 0.0;
+            this.longitude = 0.0;
+        }
+
         @Override
         public String toString() {
             return title;
@@ -103,7 +111,11 @@ public class MemoryContent {
         }
         public String getTitle() {return this.title;}
         public String getDetails() {return this.details;}
-        public double getLatitude() {return this.latitude;}
-        public double getLongitude() {return  this.longitude;}
+        public float getLatitude() {
+            return (float) this.latitude;
+        }
+        public float getLongitude() {
+            return (float) this.longitude;
+        }
     }
 }
