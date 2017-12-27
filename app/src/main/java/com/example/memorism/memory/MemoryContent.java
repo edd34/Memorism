@@ -55,9 +55,9 @@ public class MemoryContent {
                 .append("\". \n\nThe date (yyyyMMdd_HHMMSS) is \"")
                 .append(item.date)
                 .append("\". \n\nThe position GPS is (")
-                .append(item.positionX)
+                .append(item.latitude)
                 .append(",")
-                .append(item.positionY)
+                .append(item.longitude)
                 .append("). \n\nAnd here are the detail : ")
                 .append(item.details);
         return builder.toString();
@@ -67,23 +67,43 @@ public class MemoryContent {
      * A dummy item representing a piece of title.
      */
     public static class MemoryItem {
-        public final String date;
-        public final String title;
-        public final String details;
-        public final double positionX;
-        public final double positionY;
+        public String date;
+        public String title;
+        public String details;
+        public double latitude;
+        public double longitude;
 
-        public MemoryItem(String date, String title, String details,double positionX, double positionY) {
+        public MemoryItem(String date, String title, String details, double latitude, double longitude) {
             this.date = date;
             this.title = title;
             this.details = details;
-            this.positionX = positionX;
-            this.positionY = positionY;
+            this.latitude = latitude;
+            this.longitude = longitude;
         }
 
         @Override
         public String toString() {
             return title;
         }
+
+        public void setDate(String date)
+        {
+            this.date = date;
+        }
+        public void setTitle(String title) { this.title = title;}
+        public void setDetails(String details) { this.details = details;}
+        public void setPosition(double latitude,double longitude) {
+            this.latitude = latitude;
+            this.longitude = longitude;
+        }
+
+        public String getDate()
+        {
+            return this.date;
+        }
+        public String getTitle() {return this.title;}
+        public String getDetails() {return this.details;}
+        public double getLatitude() {return this.latitude;}
+        public double getLongitude() {return  this.longitude;}
     }
 }
