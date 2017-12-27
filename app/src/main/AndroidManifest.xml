@@ -33,6 +33,11 @@
             android:name=".create_memory"
             android:label="@string/title_activity_create_journey"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ShowPicture"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".Show_Map" />
 
         <meta-data

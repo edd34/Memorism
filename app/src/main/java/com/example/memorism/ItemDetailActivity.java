@@ -44,8 +44,7 @@ public class ItemDetailActivity extends AppCompatActivity {
         fab_show_pic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                MemoryContent.removeItem(ItemDetailFragment.mItem);
+                
 
                 startActivity(intent_show_pic);
 

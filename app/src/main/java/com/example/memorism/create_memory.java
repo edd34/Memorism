@@ -2,6 +2,7 @@ package com.example.memorism;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -37,12 +38,13 @@ public class create_memory extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        final Intent intent_take = new Intent(this,take_photo.class);
+
         ImageView take_show_picture = (ImageView) findViewById(R.id.take_picture_view);
         take_show_picture.setOnLongClickListener(new View.OnLongClickListener() {
                                                      @Override
                                                      public boolean onLongClick(View v) {
-                                                         Snackbar.make(v, "you have clicked the picture !", Snackbar.LENGTH_LONG)
-                                                                 .setAction("Action", null).show();
+                                                         startActivity(intent_take);
                                                          return true;
                                                      }
                                                  }
