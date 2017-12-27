@@ -27,7 +27,9 @@ public class ItemDetailActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab_show_pic = (FloatingActionButton) findViewById(R.id.show_pic);
         final Intent intent = new Intent(this,MainMenu.class);
+        final Intent intent_show_pic = new Intent(this,ShowPicture.class);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,6 +37,17 @@ public class ItemDetailActivity extends AppCompatActivity {
                 MemoryContent.removeItem(ItemDetailFragment.mItem);
 
                 startActivity(intent);
+
+            }
+        });
+
+        fab_show_pic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                MemoryContent.removeItem(ItemDetailFragment.mItem);
+
+                startActivity(intent_show_pic);
 
             }
         });
