@@ -29,7 +29,7 @@ public class create_memory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ceate_journey);
         ActivityCompat.requestPermissions(create_memory.this,new String[]{
-            Manifest.permission.ACCESS_FINE_LOCATION},123);
+                Manifest.permission.ACCESS_FINE_LOCATION},123);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -39,7 +39,7 @@ public class create_memory extends AppCompatActivity {
                                                      public boolean onLongClick(View v) {
                                                          Snackbar.make(v, "you have clicked the picture !", Snackbar.LENGTH_LONG)
                                                                  .setAction("Action", null).show();
-                                                     return true;
+                                                         return true;
                                                      }
                                                  }
 
@@ -49,43 +49,45 @@ public class create_memory extends AppCompatActivity {
         take_show_picture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GPStracker g = new GPStracker(getApplicationContext());
-                Location l = g.getLocation();
-                if(l != null)
-                {
-                    lat = l.getLatitude();
-                    lon = l.getLongitude();
-                    //Toast.makeText(getApplicationContext(), "LAT:"+lat+"\nLon"+lon, Toast.LENGTH_LONG).show();
-                }
-
+                Snackbar.make(v, "Hey long click to open the camera !", Snackbar.LENGTH_LONG)
+                        .show();
             }
         });
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.quick_add_memory);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                EditText text = (EditText)findViewById(R.id.memory_input_string);
-                String memory_string_value= text.getText().toString();
+                GPStracker g = new GPStracker(getApplicationContext());
+                Location l = g.getLocation();
+                if(l != null)
+                {
+                    lat = l.getLatitude();
+                    lon = l.getLongitude();
 
-                text = (EditText)findViewById(R.id.detail_input_string);
-                String detail_string_value = text.getText().toString();
+                    EditText text = (EditText)findViewById(R.id.memory_input_string);
+                    String memory_string_value= text.getText().toString();
 
-                String new_id = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(new Date());
+                    text = (EditText)findViewById(R.id.detail_input_string);
+                    String detail_string_value = text.getText().toString();
 
-                MemoryContent.MemoryItem tmp_dummy = new MemoryContent.MemoryItem(new_id,memory_string_value,detail_string_value,lat,lon);
+                    String new_id = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(new Date());
 
-                MemoryContent.addItem(tmp_dummy);
+                    MemoryContent.MemoryItem tmp_dummy = new MemoryContent.MemoryItem(new_id,memory_string_value,detail_string_value,lat,lon);
 
-                Snackbar.make(view, "Memory "+memory_string_value + " saved !", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                    MemoryContent.addItem(tmp_dummy);
+
+                    Snackbar.make(view, "Memory "+memory_string_value + " saved !", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
 
 
 
 
-            }
+                }
+            };
         });
-    }
 
+    }
 }
