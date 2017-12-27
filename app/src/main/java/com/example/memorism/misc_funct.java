@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class misc_funct {
 
-    public static float randomNumberposXY(int min, int max)
+    public static double randomNumberposXY(int min, int max)
     {
         Random r = new Random();
         float random = min + r.nextFloat() * (max - min);

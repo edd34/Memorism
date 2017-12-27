@@ -37,7 +37,7 @@ public class MemoryContent {
         ITEM_MAP.put(item.date, item);
     }
 
-    public static void addItem(String date, String title, String details,float positionX, float positionY) {
+    public static void addItem(String date, String title, String details,double positionX, double positionY) {
         MemoryItem tmp = new MemoryItem(date,title,details,positionX,positionY);
         ITEMS.add(tmp);
         ITEM_MAP.put(tmp.date, tmp);
@@ -70,10 +70,10 @@ public class MemoryContent {
         public final String date;
         public final String title;
         public final String details;
-        public final float positionX;
-        public final float positionY;
+        public final double positionX;
+        public final double positionY;
 
-        public MemoryItem(String date, String title, String details,float positionX, float positionY) {
+        public MemoryItem(String date, String title, String details,double positionX, double positionY) {
             this.date = date;
             this.title = title;
             this.details = details;

@@ -21,7 +21,8 @@ import java.util.Date;
 
 public class create_memory extends AppCompatActivity {
 
-
+    double lat;
+    double lon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,9 +53,9 @@ public class create_memory extends AppCompatActivity {
                 Location l = g.getLocation();
                 if(l != null)
                 {
-                    double lat = l.getLatitude();
-                    double lon = l.getLongitude();
-                    Toast.makeText(getApplicationContext(), "LAT:"+lat+"\nLon"+lon, Toast.LENGTH_LONG).show();
+                    lat = l.getLatitude();
+                    lon = l.getLongitude();
+                    //Toast.makeText(getApplicationContext(), "LAT:"+lat+"\nLon"+lon, Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -71,9 +72,9 @@ public class create_memory extends AppCompatActivity {
                 text = (EditText)findViewById(R.id.detail_input_string);
                 String detail_string_value = text.getText().toString();
 
-                String new_id = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+                String new_id = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(new Date());
 
-                MemoryContent.MemoryItem tmp_dummy = new MemoryContent.MemoryItem(new_id,memory_string_value,detail_string_value,misc_funct.randomNumberposXY(-90,90),misc_funct.randomNumberposXY(-180,180));
+                MemoryContent.MemoryItem tmp_dummy = new MemoryContent.MemoryItem(new_id,memory_string_value,detail_string_value,lat,lon);
 
                 MemoryContent.addItem(tmp_dummy);
 
