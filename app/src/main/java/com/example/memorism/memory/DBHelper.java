@@ -26,8 +26,6 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String COLUMN_LONGITUDE = "longitude";
     public static final String COLUMN_LATITUDE = "latitude";
 
-    private HashMap hp;
-
     public DBHelper(Context context) {
         super(context, DATABASE_NAME , null, 1);
     }
@@ -54,7 +52,13 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // TODO Auto-generated method stub
-        db.execSQL("DROP TABLE IF EXISTS contacts");
+        db.execSQL("DROP TABLE IF EXISTS "+ TABLE_NAME);
+        onCreate(db);
+    }
+
+    public void reset_dataBase(SQLiteDatabase db)
+    {
+        db.execSQL("DROP TABLE IF EXISTS "+ TABLE_NAME);
         onCreate(db);
     }
 
