@@ -58,51 +58,51 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insertContact (String date, String title, String details, float latitude, float longitude) {
+    public boolean insertContact (MemoryContent.MemoryItem item) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put(COLUMN_DATE, date);
-        contentValues.put("phone", phone);
-        contentValues.put("email", email);
-        contentValues.put("street", street);
-        contentValues.put("place", place);
-        db.insert("contacts", null, contentValues);
+        contentValues.put(COLUMN_DATE, item.getDate());
+        contentValues.put(COLUMN_TITLE, item.getTitle());
+        contentValues.put(COLUMN_DETAILS,item.getDetails());
+        contentValues.put(COLUMN_LATITUDE,item.getLatitude());
+        contentValues.put(COLUMN_LONGITUDE,item.getLongitude());
+        db.insert(TABLE_NAME, null, contentValues);
         return true;
     }
 
-    public Cursor getData(int id) {
+    public Cursor getData(String date) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res =  db.rawQuery( "select * from contacts where id="+id+"", null );
+        Cursor res =  db.rawQuery( "select * from "+TABLE_NAME+" where "+COLUMN_DATE +"="+date, null );
         return res;
     }
 
     public int numberOfRows(){
         SQLiteDatabase db = this.getReadableDatabase();
-        int numRows = (int) DatabaseUtils.queryNumEntries(db, MEMORISM_TABLE_NAME);
+        int numRows = (int) DatabaseUtils.queryNumEntries(db, TABLE_NAME);
         return numRows;
     }
 
-    public boolean updateContact (Integer id, String name, String phone, String email, String street,String place) {
+    public boolean updateMemory (String date, String newTitle, String newDetails, float newLatitude, float newLongitude) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("name", name);
-        contentValues.put("phone", phone);
-        contentValues.put("email", email);
-        contentValues.put("street", street);
-        contentValues.put("place", place);
-        db.update("contacts", contentValues, "id = ? ", new String[] { Integer.toString(id) } );
+        contentValues.put(COLUMN_DATE, date);
+        contentValues.put(COLUMN_TITLE, newTitle);
+        contentValues.put(COLUMN_DETAILS,newDetails);
+        contentValues.put(COLUMN_LATITUDE,newLatitude);
+        contentValues.put(COLUMN_LONGITUDE,newLongitude);
+        db.update(TABLE_NAME, contentValues, COLUMN_DATE+" = ? ",new String[] {date} );
         return true;
     }
 
-    public Integer deleteContact (Integer id) {
+    public Integer deleteMemory (String date) {
         SQLiteDatabase db = this.getWritableDatabase();
-        return db.delete("contacts",
-                "id = ? ",
-                new String[] { Integer.toString(id) });
+        return db.delete(TABLE_NAME,
+                COLUMN_DATE+" = ? ",
+                new String[] { date });
     }
 
-    public ArrayList<String> getAllCotacts() {
-        ArrayList<String> array_list = new ArrayList<String>();
+  /*  public ArrayList<String> getAllMemory() {
+  /*      ArrayList<String> array_list = new ArrayList<String>();
 
         //hp = new HashMap();
         SQLiteDatabase db = this.getReadableDatabase();
@@ -110,9 +110,9 @@ public class DBHelper extends SQLiteOpenHelper {
         res.moveToFirst();
 
         while(res.isAfterLast() == false){
-            array_list.add(res.getString(res.getColumnIndex(MEMORISM_COLUMN_TITLE)));
+         //   array_list.add(res.getString(res.getColumnIndex(MEMORISM_COLUMN_TITLE)));
             res.moveToNext();
         }
         return array_list;
-    }
+    }*/
 }
