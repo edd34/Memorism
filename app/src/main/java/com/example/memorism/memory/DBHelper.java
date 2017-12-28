@@ -18,7 +18,7 @@ import java.util.HashMap;
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "Memorism_database.db";
-    public static final String MEMORISM_TABLE_NAME = "memory_content";
+    public static final String TABLE_NAME = "memory_content";
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_DATE = "date";
     public static final String COLUMN_TITLE = "title";
@@ -35,9 +35,19 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // TODO Auto-generated method stub
-        db.execSQL(
+        /*db.execSQL(
                 "create table contacts " +
                         "(id integer primary key, name text,phone text,email text, street text,place text)"
+        );*/
+        db.execSQL(
+                "create table " + TABLE_NAME + "("+
+                        COLUMN_ID + " integer primary key" + ","
+                        + COLUMN_DATE + " string,"
+                        + COLUMN_TITLE + " string,"
+                        + COLUMN_DETAILS + " string,"
+                        + COLUMN_LATITUDE + " float,"
+                        + COLUMN_LONGITUDE + " float)"
+
         );
     }
 
@@ -48,10 +58,10 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insertContact (String name, String phone, String email, String street,String place) {
+    public boolean insertContact (String date, String title, String details, float latitude, float longitude) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("name", name);
+        contentValues.put(COLUMN_DATE, date);
         contentValues.put("phone", phone);
         contentValues.put("email", email);
         contentValues.put("street", street);
