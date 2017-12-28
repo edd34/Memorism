@@ -25,8 +25,8 @@ public class MainMenu extends AppCompatActivity
         setContentView(R.layout.activity_main_menu);
 
         mydb = new DBHelper(this);
-        mydb.insertContact(new MemoryContent.MemoryItem());
-        mydb.insertContact(new MemoryContent.MemoryItem());
+        mydb.insertMemoryIntoDB(new MemoryContent.MemoryItem());
+        mydb.insertMemoryIntoDB(new MemoryContent.MemoryItem());
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

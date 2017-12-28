@@ -58,7 +58,7 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insertContact (MemoryContent.MemoryItem item) {
+    public boolean insertMemoryIntoDB(MemoryContent.MemoryItem item) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COLUMN_DATE, item.getDate());
@@ -70,10 +70,16 @@ public class DBHelper extends SQLiteOpenHelper {
         return true;
     }
 
-    public Cursor getData(String date) {
+    public MemoryContent.MemoryItem getItemFromDB(String date) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res =  db.rawQuery( "select * from "+TABLE_NAME+" where "+COLUMN_DATE +"="+date, null );
-        return res;
+        MemoryContent.MemoryItem this_item = new MemoryContent.MemoryItem();
+        this_item.setDate(res.getString(res.getColumnIndex(COLUMN_DATE)));
+        this_item.setTitle(res.getString(res.getColumnIndex(COLUMN_TITLE)));
+        this_item.setDetails(res.getString(res.getColumnIndex(COLUMN_DETAILS)));
+        this_item.setPosition(res.getDouble(res.getColumnIndex(COLUMN_LATITUDE)),res.getDouble(res.getColumnIndex(COLUMN_LATITUDE)));
+
+        return this_item;
     }
 
     public int numberOfRows(){
@@ -101,18 +107,22 @@ public class DBHelper extends SQLiteOpenHelper {
                 new String[] { date });
     }
 
-  /*  public ArrayList<String> getAllMemory() {
-  /*      ArrayList<String> array_list = new ArrayList<String>();
+    public void getAllMemory() {
 
-        //hp = new HashMap();
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res =  db.rawQuery( "select * from contacts", null );
+        Cursor res =  db.rawQuery( "select * from "+TABLE_NAME, null );
         res.moveToFirst();
 
+        MemoryContent.MemoryItem this_item = new MemoryContent.MemoryItem();
+
         while(res.isAfterLast() == false){
-         //   array_list.add(res.getString(res.getColumnIndex(MEMORISM_COLUMN_TITLE)));
+            this_item.setDate(res.getString(res.getColumnIndex(COLUMN_DATE)));
+            this_item.setTitle(res.getString(res.getColumnIndex(COLUMN_TITLE)));
+            this_item.setDetails(res.getString(res.getColumnIndex(COLUMN_DETAILS)));
+            this_item.setPosition(res.getDouble(res.getColumnIndex(COLUMN_LATITUDE)),res.getDouble(res.getColumnIndex(COLUMN_LATITUDE)));
+
+            MemoryContent.ITEMS.add(this_item);
             res.moveToNext();
         }
-        return array_list;
-    }*/
+    }
 }

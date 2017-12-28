@@ -21,31 +21,25 @@ public class MemoryContent {
     /**
      * A map of sample (dummy) items, by ID.
      */
-    public static final Map<String, MemoryItem> ITEM_MAP = new HashMap<String, MemoryItem>();
+   // public static final Map<String, MemoryItem> ITEM_MAP = new HashMap<String, MemoryItem>();
 
-    private static final int COUNT = 25;
 
-    static {
-        // Add some sample items.
-        /*for (int i = 1; i <= COUNT; i++) {
-            addItem(createDummyItem(i));
-        }*/
-    }
+
 
     public static void addItem(MemoryItem item) {
         ITEMS.add(item);
-        ITEM_MAP.put(item.date, item);
+        //ITEM_MAP.put(item.date, item);
     }
 
     public static void addItem(String date, String title, String details,double positionX, double positionY) {
         MemoryItem tmp = new MemoryItem(date,title,details,positionX,positionY);
         ITEMS.add(tmp);
-        ITEM_MAP.put(tmp.date, tmp);
+        //ITEM_MAP.put(tmp.date, tmp);
     }
 
     public static void removeItem(MemoryItem item) {
         ITEMS.remove(item);
-        ITEM_MAP.remove(item.date,item);
+        //ITEM_MAP.remove(item.date,item);
     }
 
     public static String makeDetails(MemoryItem item) {
