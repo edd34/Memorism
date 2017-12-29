@@ -21,14 +21,14 @@ public class MemoryContent {
     /**
      * A map of sample (dummy) items, by ID.
      */
-   // public static final Map<String, MemoryItem> ITEM_MAP = new HashMap<String, MemoryItem>();
+    public static final Map<String, MemoryItem> ITEM_MAP = new HashMap<String, MemoryItem>();
 
 
 
 
     public static void addItem(MemoryItem item) {
         ITEMS.add(item);
-        //ITEM_MAP.put(item.date, item);
+        ITEM_MAP.put(item.date, item);
     }
 
     public static void addItem(String date, String title, String details,double positionX, double positionY) {
@@ -39,7 +39,7 @@ public class MemoryContent {
 
     public static void removeItem(MemoryItem item) {
         ITEMS.remove(item);
-        //ITEM_MAP.remove(item.date,item);
+        ITEM_MAP.remove(item.date,item);
     }
 
     public static String makeDetails(MemoryItem item) {
