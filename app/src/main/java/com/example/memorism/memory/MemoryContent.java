@@ -17,7 +17,7 @@ public class MemoryContent {
      * An array of sample (dummy) items.
      */
     public static final List<MemoryItem> ITEMS = new ArrayList<MemoryItem>();
-
+    public static DBHelper mydb;
     /**
      * A map of sample (dummy) items, by ID.
      */
@@ -29,12 +29,14 @@ public class MemoryContent {
     public static void addItem(MemoryItem item) {
         ITEMS.add(item);
         ITEM_MAP.put(item.date, item);
+        mydb.insertMemoryIntoDB(item);
     }
 
     public static void addItem(String date, String title, String details,double positionX, double positionY) {
         MemoryItem tmp = new MemoryItem(date,title,details,positionX,positionY);
         ITEMS.add(tmp);
-        //ITEM_MAP.put(tmp.date, tmp);
+        ITEM_MAP.put(tmp.date, tmp);
+
     }
 
     public static void removeItem(MemoryItem item) {

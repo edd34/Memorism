@@ -18,15 +18,12 @@ import com.example.memorism.memory.MemoryContent;
 
 public class MainMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private DBHelper mydb ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-
-        mydb = new DBHelper(this);
-        mydb.insertMemoryIntoDB(new MemoryContent.MemoryItem());
-        mydb.insertMemoryIntoDB(new MemoryContent.MemoryItem());
+        MemoryContent.mydb = new DBHelper(this);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

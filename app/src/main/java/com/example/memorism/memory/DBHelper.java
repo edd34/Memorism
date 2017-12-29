@@ -17,6 +17,8 @@ import java.util.HashMap;
 
 public class DBHelper extends SQLiteOpenHelper {
 
+
+
     public static final String DATABASE_NAME = "Memorism_database.db";
     public static final String TABLE_NAME = "memory_content";
     public static final String COLUMN_ID = "id";
