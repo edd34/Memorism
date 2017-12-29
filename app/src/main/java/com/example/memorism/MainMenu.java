@@ -16,14 +16,23 @@ import android.view.MenuItem;
 import com.example.memorism.memory.DBHelper;
 import com.example.memorism.memory.MemoryContent;
 
+import static com.example.memorism.memory.MemoryContent.mydb;
+
 public class MainMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-        MemoryContent.mydb = new DBHelper(this);
+        mydb = new DBHelper(this);
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -47,6 +56,7 @@ public class MainMenu extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        mydb.getAllMemory();
     }
 
     @Override

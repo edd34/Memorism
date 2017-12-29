@@ -4,11 +4,19 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
+import android.database.sqlite.SQLiteCursorDriver;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteQuery;
+import android.os.Environment;
+import android.util.Log;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import static com.example.memorism.memory.MemoryContent.ITEM_MAP;
+import static com.example.memorism.memory.MemoryContent.ITEMS;
 
 /**
  * Created by farid on 27/12/17.
@@ -30,6 +38,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME , null, 1);
+
     }
 
     @Override
@@ -39,16 +48,26 @@ public class DBHelper extends SQLiteOpenHelper {
                 "create table contacts " +
                         "(id integer primary key, name text,phone text,email text, street text,place text)"
         );*/
-        db.execSQL(
-                "create table " + TABLE_NAME + "("+
-                        COLUMN_ID + " integer primary key" + ","
-                        + COLUMN_DATE + " string,"
-                        + COLUMN_TITLE + " string,"
-                        + COLUMN_DETAILS + " string,"
-                        + COLUMN_LATITUDE + " float,"
-                        + COLUMN_LONGITUDE + " float)"
 
-        );
+
+        try {
+            db.execSQL(
+                    "create table " + TABLE_NAME + "(" +
+                            COLUMN_ID + " integer primary key" + ","
+                            + COLUMN_DATE + " string,"
+                            + COLUMN_TITLE + " string,"
+                            + COLUMN_DETAILS + " string,"
+                            + COLUMN_LATITUDE + " float,"
+                            + COLUMN_LONGITUDE + " float)"
+
+            );
+        }
+        catch (Exception e)
+        {
+
+        }
+
+
     }
 
     @Override
@@ -122,12 +141,15 @@ public class DBHelper extends SQLiteOpenHelper {
         MemoryContent.MemoryItem this_item = new MemoryContent.MemoryItem();
 
         while(res.isAfterLast() == false){
+            this_item = new MemoryContent.MemoryItem();
             this_item.setDate(res.getString(res.getColumnIndex(COLUMN_DATE)));
             this_item.setTitle(res.getString(res.getColumnIndex(COLUMN_TITLE)));
             this_item.setDetails(res.getString(res.getColumnIndex(COLUMN_DETAILS)));
             this_item.setPosition(res.getDouble(res.getColumnIndex(COLUMN_LATITUDE)),res.getDouble(res.getColumnIndex(COLUMN_LATITUDE)));
+            Log.d("\nitem","\nitem date"+ this_item.getDate());
+            ITEMS.add(this_item);
+            ITEM_MAP.put(this_item.date, this_item);
 
-            MemoryContent.ITEMS.add(this_item);
             res.moveToNext();
         }
     }
