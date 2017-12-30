@@ -3,6 +3,7 @@ package com.example.memorism;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.memorism.memory.MemoryContent;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -28,5 +29,14 @@ public class Show_Map extends AppCompatActivity implements OnMapReadyCallback {
         googleMap.addMarker(new MarkerOptions().position(sydney)
                 .title("Marker in Sydney"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+    }
+
+    public void addAllLocation()
+    {
+        LatLng this_item = new LatLng(0.0,0.0);
+        if(MemoryContent.ITEMS.size() > 0)
+        {
+
+        }
     }
 }
