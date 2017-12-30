@@ -25,18 +25,20 @@ public class Show_Map extends AppCompatActivity implements OnMapReadyCallback {
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        LatLng sydney = new LatLng(-33.852, 151.211);
-        googleMap.addMarker(new MarkerOptions().position(sydney)
-                .title("Marker in Sydney"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        addAllLocation(googleMap);
     }
 
-    public void addAllLocation()
+    public void addAllLocation(GoogleMap googleMap)
     {
-        LatLng this_item = new LatLng(0.0,0.0);
+        LatLng currentPosition = new LatLng(0.0,0.0);
         if(MemoryContent.ITEMS.size() > 0)
         {
-
+            for(MemoryContent.MemoryItem currentItem : MemoryContent.ITEMS)
+            {
+               currentPosition = new LatLng(currentItem.getLatitude(),currentItem.getLongitude()) ;
+                googleMap.addMarker(new MarkerOptions().position(currentPosition).title(currentItem.getTitle()));
+            }
+            googleMap.moveCamera(CameraUpdateFactory.newLatLng(currentPosition));
         }
     }
 }
