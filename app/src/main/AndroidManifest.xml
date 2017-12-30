@@ -42,7 +42,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyC_xHFIZ4DN2fcK5BnSOohue77u8fjLOZE" />
+            android:value="AIzaSyCI9CD08__auppxlvo2_51lHMUzBfmtxzA" />
 
         <activity
             android:name=".ItemListActivity"
