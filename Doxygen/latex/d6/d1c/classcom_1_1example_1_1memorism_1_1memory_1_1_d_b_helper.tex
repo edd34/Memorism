@@ -1,0 +1,257 @@
+\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper}{}\section{com.\+example.\+memorism.\+memory.\+D\+B\+Helper Class Reference}
+\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper}\index{com.\+example.\+memorism.\+memory.\+D\+B\+Helper@{com.\+example.\+memorism.\+memory.\+D\+B\+Helper}}
+
+
+Inheritance diagram for com.\+example.\+memorism.\+memory.\+D\+B\+Helper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{d2/d8c/classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for com.\+example.\+memorism.\+memory.\+D\+B\+Helper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{d5/d96/classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a1a910311426223624f16314574fc8395}{D\+B\+Helper} (Context context)
+\item 
+void \hyperlink{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_af116d080f66582b43bf7cc392862f1cd}{on\+Create} (S\+Q\+Lite\+Database db)
+\item 
+void \hyperlink{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a10e47b5b5978e7f89ec326cf3782c2b0}{on\+Upgrade} (S\+Q\+Lite\+Database db, int old\+Version, int new\+Version)
+\item 
+void \hyperlink{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a5a10d27ab67b8b21fe6a4791138596a2}{reset\+\_\+data\+Base} (S\+Q\+Lite\+Database db)
+\item 
+boolean \hyperlink{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a377fbc795ffd8620bd16276bc373f9e9}{insert\+Memory\+Into\+DB} (Memory\+Content.\+Memory\+Item item)
+\item 
+Memory\+Content.\+Memory\+Item \hyperlink{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_ae2b30388cd48178666c0fa93ef9362b6}{get\+Item\+From\+DB} (String date)
+\item 
+int \hyperlink{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_ace53414fe54d6caa930a1453ab7d237a}{number\+Of\+Rows} ()
+\item 
+boolean \hyperlink{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_aa40fc6dae948e51c155f23695c2af9c6}{update\+Memory} (String date, String new\+Title, String new\+Details, float new\+Latitude, float new\+Longitude)
+\item 
+Integer \hyperlink{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a93e6cb1b1f1bc8d39aeaace04dc92446}{delete\+Memory} (String date)
+\item 
+void \hyperlink{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a82845616a8210bace5188f41aaef1594}{get\+All\+Memory} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a61a19ee13881d07c502373a34687d671}{D\+A\+T\+A\+B\+A\+S\+E\+\_\+\+N\+A\+ME} = \char`\"{}Memorism\+\_\+database.\+db\char`\"{}
+\item 
+static final String \hyperlink{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_afb514eee57c4fe21a7c1b7c9c72747a0}{T\+A\+B\+L\+E\+\_\+\+N\+A\+ME} = \char`\"{}memory\+\_\+content\char`\"{}
+\item 
+static final String \hyperlink{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a12593a1ae6e3c03afbc9d108b7c59dff}{C\+O\+L\+U\+M\+N\+\_\+\+ID} = \char`\"{}id\char`\"{}
+\item 
+static final String \hyperlink{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a78ff1252868691cc74b9a20b44849ea5}{C\+O\+L\+U\+M\+N\+\_\+\+D\+A\+TE} = \char`\"{}date\char`\"{}
+\item 
+static final String \hyperlink{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_ab96886bfdaf0e3551201f4e03f1e4ad0}{C\+O\+L\+U\+M\+N\+\_\+\+T\+I\+T\+LE} = \char`\"{}title\char`\"{}
+\item 
+static final String \hyperlink{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a43bb30fdefc54ee809ff8517fb0cdbfc}{C\+O\+L\+U\+M\+N\+\_\+\+D\+E\+T\+A\+I\+LS} = \char`\"{}details\char`\"{}
+\item 
+static final String \hyperlink{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a853f90958b6e860ffa3fea8c315b7c26}{C\+O\+L\+U\+M\+N\+\_\+\+L\+O\+N\+G\+I\+T\+U\+DE} = \char`\"{}longitude\char`\"{}
+\item 
+static final String \hyperlink{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_aef173dee96dd1d3292ed86bc1394fb37}{C\+O\+L\+U\+M\+N\+\_\+\+L\+A\+T\+I\+T\+U\+DE} = \char`\"{}latitude\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Created by farid on 27/12/17. 
+
+Definition at line 26 of file D\+B\+Helper.\+java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}!D\+B\+Helper@{D\+B\+Helper}}
+\index{D\+B\+Helper@{D\+B\+Helper}!com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}}
+\subsubsection[{\texorpdfstring{D\+B\+Helper(\+Context context)}{DBHelper(Context context)}}]{\setlength{\rightskip}{0pt plus 5cm}com.\+example.\+memorism.\+memory.\+D\+B\+Helper.\+D\+B\+Helper (
+\begin{DoxyParamCaption}
+\item[{Context}]{context}
+\end{DoxyParamCaption}
+)}\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a1a910311426223624f16314574fc8395}{}\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a1a910311426223624f16314574fc8395}
+
+
+Definition at line 39 of file D\+B\+Helper.\+java.
+
+
+
+\subsection{Member Function Documentation}
+\index{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}!delete\+Memory@{delete\+Memory}}
+\index{delete\+Memory@{delete\+Memory}!com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}}
+\subsubsection[{\texorpdfstring{delete\+Memory(\+String date)}{deleteMemory(String date)}}]{\setlength{\rightskip}{0pt plus 5cm}Integer com.\+example.\+memorism.\+memory.\+D\+B\+Helper.\+delete\+Memory (
+\begin{DoxyParamCaption}
+\item[{String}]{date}
+\end{DoxyParamCaption}
+)}\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a93e6cb1b1f1bc8d39aeaace04dc92446}{}\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a93e6cb1b1f1bc8d39aeaace04dc92446}
+
+
+Definition at line 128 of file D\+B\+Helper.\+java.
+
+\index{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}!get\+All\+Memory@{get\+All\+Memory}}
+\index{get\+All\+Memory@{get\+All\+Memory}!com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}}
+\subsubsection[{\texorpdfstring{get\+All\+Memory()}{getAllMemory()}}]{\setlength{\rightskip}{0pt plus 5cm}void com.\+example.\+memorism.\+memory.\+D\+B\+Helper.\+get\+All\+Memory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a82845616a8210bace5188f41aaef1594}{}\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a82845616a8210bace5188f41aaef1594}
+
+
+Definition at line 135 of file D\+B\+Helper.\+java.
+
+\index{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}!get\+Item\+From\+DB@{get\+Item\+From\+DB}}
+\index{get\+Item\+From\+DB@{get\+Item\+From\+DB}!com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}}
+\subsubsection[{\texorpdfstring{get\+Item\+From\+D\+B(\+String date)}{getItemFromDB(String date)}}]{\setlength{\rightskip}{0pt plus 5cm}Memory\+Content.\+Memory\+Item com.\+example.\+memorism.\+memory.\+D\+B\+Helper.\+get\+Item\+From\+DB (
+\begin{DoxyParamCaption}
+\item[{String}]{date}
+\end{DoxyParamCaption}
+)}\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_ae2b30388cd48178666c0fa93ef9362b6}{}\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_ae2b30388cd48178666c0fa93ef9362b6}
+
+
+Definition at line 98 of file D\+B\+Helper.\+java.
+
+\index{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}!insert\+Memory\+Into\+DB@{insert\+Memory\+Into\+DB}}
+\index{insert\+Memory\+Into\+DB@{insert\+Memory\+Into\+DB}!com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}}
+\subsubsection[{\texorpdfstring{insert\+Memory\+Into\+D\+B(\+Memory\+Content.\+Memory\+Item item)}{insertMemoryIntoDB(MemoryContent.MemoryItem item)}}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.\+example.\+memorism.\+memory.\+D\+B\+Helper.\+insert\+Memory\+Into\+DB (
+\begin{DoxyParamCaption}
+\item[{Memory\+Content.\+Memory\+Item}]{item}
+\end{DoxyParamCaption}
+)}\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a377fbc795ffd8620bd16276bc373f9e9}{}\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a377fbc795ffd8620bd16276bc373f9e9}
+
+
+Definition at line 86 of file D\+B\+Helper.\+java.
+
+\index{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}!number\+Of\+Rows@{number\+Of\+Rows}}
+\index{number\+Of\+Rows@{number\+Of\+Rows}!com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}}
+\subsubsection[{\texorpdfstring{number\+Of\+Rows()}{numberOfRows()}}]{\setlength{\rightskip}{0pt plus 5cm}int com.\+example.\+memorism.\+memory.\+D\+B\+Helper.\+number\+Of\+Rows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_ace53414fe54d6caa930a1453ab7d237a}{}\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_ace53414fe54d6caa930a1453ab7d237a}
+
+
+Definition at line 110 of file D\+B\+Helper.\+java.
+
+\index{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}!on\+Create@{on\+Create}}
+\index{on\+Create@{on\+Create}!com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}}
+\subsubsection[{\texorpdfstring{on\+Create(\+S\+Q\+Lite\+Database db)}{onCreate(SQLiteDatabase db)}}]{\setlength{\rightskip}{0pt plus 5cm}void com.\+example.\+memorism.\+memory.\+D\+B\+Helper.\+on\+Create (
+\begin{DoxyParamCaption}
+\item[{S\+Q\+Lite\+Database}]{db}
+\end{DoxyParamCaption}
+)}\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_af116d080f66582b43bf7cc392862f1cd}{}\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_af116d080f66582b43bf7cc392862f1cd}
+
+
+Definition at line 45 of file D\+B\+Helper.\+java.
+
+\index{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}!on\+Upgrade@{on\+Upgrade}}
+\index{on\+Upgrade@{on\+Upgrade}!com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}}
+\subsubsection[{\texorpdfstring{on\+Upgrade(\+S\+Q\+Lite\+Database db, int old\+Version, int new\+Version)}{onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)}}]{\setlength{\rightskip}{0pt plus 5cm}void com.\+example.\+memorism.\+memory.\+D\+B\+Helper.\+on\+Upgrade (
+\begin{DoxyParamCaption}
+\item[{S\+Q\+Lite\+Database}]{db, }
+\item[{int}]{old\+Version, }
+\item[{int}]{new\+Version}
+\end{DoxyParamCaption}
+)}\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a10e47b5b5978e7f89ec326cf3782c2b0}{}\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a10e47b5b5978e7f89ec326cf3782c2b0}
+
+
+Definition at line 74 of file D\+B\+Helper.\+java.
+
+\index{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}!reset\+\_\+data\+Base@{reset\+\_\+data\+Base}}
+\index{reset\+\_\+data\+Base@{reset\+\_\+data\+Base}!com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}}
+\subsubsection[{\texorpdfstring{reset\+\_\+data\+Base(\+S\+Q\+Lite\+Database db)}{reset_dataBase(SQLiteDatabase db)}}]{\setlength{\rightskip}{0pt plus 5cm}void com.\+example.\+memorism.\+memory.\+D\+B\+Helper.\+reset\+\_\+data\+Base (
+\begin{DoxyParamCaption}
+\item[{S\+Q\+Lite\+Database}]{db}
+\end{DoxyParamCaption}
+)}\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a5a10d27ab67b8b21fe6a4791138596a2}{}\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a5a10d27ab67b8b21fe6a4791138596a2}
+
+
+Definition at line 80 of file D\+B\+Helper.\+java.
+
+\index{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}!update\+Memory@{update\+Memory}}
+\index{update\+Memory@{update\+Memory}!com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}}
+\subsubsection[{\texorpdfstring{update\+Memory(\+String date, String new\+Title, String new\+Details, float new\+Latitude, float new\+Longitude)}{updateMemory(String date, String newTitle, String newDetails, float newLatitude, float newLongitude)}}]{\setlength{\rightskip}{0pt plus 5cm}boolean com.\+example.\+memorism.\+memory.\+D\+B\+Helper.\+update\+Memory (
+\begin{DoxyParamCaption}
+\item[{String}]{date, }
+\item[{String}]{new\+Title, }
+\item[{String}]{new\+Details, }
+\item[{float}]{new\+Latitude, }
+\item[{float}]{new\+Longitude}
+\end{DoxyParamCaption}
+)}\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_aa40fc6dae948e51c155f23695c2af9c6}{}\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_aa40fc6dae948e51c155f23695c2af9c6}
+
+
+Definition at line 116 of file D\+B\+Helper.\+java.
+
+
+
+\subsection{Member Data Documentation}
+\index{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}!C\+O\+L\+U\+M\+N\+\_\+\+D\+A\+TE@{C\+O\+L\+U\+M\+N\+\_\+\+D\+A\+TE}}
+\index{C\+O\+L\+U\+M\+N\+\_\+\+D\+A\+TE@{C\+O\+L\+U\+M\+N\+\_\+\+D\+A\+TE}!com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}}
+\subsubsection[{\texorpdfstring{C\+O\+L\+U\+M\+N\+\_\+\+D\+A\+TE}{COLUMN_DATE}}]{\setlength{\rightskip}{0pt plus 5cm}final String com.\+example.\+memorism.\+memory.\+D\+B\+Helper.\+C\+O\+L\+U\+M\+N\+\_\+\+D\+A\+TE = \char`\"{}date\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a78ff1252868691cc74b9a20b44849ea5}{}\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a78ff1252868691cc74b9a20b44849ea5}
+
+
+Definition at line 33 of file D\+B\+Helper.\+java.
+
+\index{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}!C\+O\+L\+U\+M\+N\+\_\+\+D\+E\+T\+A\+I\+LS@{C\+O\+L\+U\+M\+N\+\_\+\+D\+E\+T\+A\+I\+LS}}
+\index{C\+O\+L\+U\+M\+N\+\_\+\+D\+E\+T\+A\+I\+LS@{C\+O\+L\+U\+M\+N\+\_\+\+D\+E\+T\+A\+I\+LS}!com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}}
+\subsubsection[{\texorpdfstring{C\+O\+L\+U\+M\+N\+\_\+\+D\+E\+T\+A\+I\+LS}{COLUMN_DETAILS}}]{\setlength{\rightskip}{0pt plus 5cm}final String com.\+example.\+memorism.\+memory.\+D\+B\+Helper.\+C\+O\+L\+U\+M\+N\+\_\+\+D\+E\+T\+A\+I\+LS = \char`\"{}details\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a43bb30fdefc54ee809ff8517fb0cdbfc}{}\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a43bb30fdefc54ee809ff8517fb0cdbfc}
+
+
+Definition at line 35 of file D\+B\+Helper.\+java.
+
+\index{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}!C\+O\+L\+U\+M\+N\+\_\+\+ID@{C\+O\+L\+U\+M\+N\+\_\+\+ID}}
+\index{C\+O\+L\+U\+M\+N\+\_\+\+ID@{C\+O\+L\+U\+M\+N\+\_\+\+ID}!com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}}
+\subsubsection[{\texorpdfstring{C\+O\+L\+U\+M\+N\+\_\+\+ID}{COLUMN_ID}}]{\setlength{\rightskip}{0pt plus 5cm}final String com.\+example.\+memorism.\+memory.\+D\+B\+Helper.\+C\+O\+L\+U\+M\+N\+\_\+\+ID = \char`\"{}id\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a12593a1ae6e3c03afbc9d108b7c59dff}{}\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a12593a1ae6e3c03afbc9d108b7c59dff}
+
+
+Definition at line 32 of file D\+B\+Helper.\+java.
+
+\index{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}!C\+O\+L\+U\+M\+N\+\_\+\+L\+A\+T\+I\+T\+U\+DE@{C\+O\+L\+U\+M\+N\+\_\+\+L\+A\+T\+I\+T\+U\+DE}}
+\index{C\+O\+L\+U\+M\+N\+\_\+\+L\+A\+T\+I\+T\+U\+DE@{C\+O\+L\+U\+M\+N\+\_\+\+L\+A\+T\+I\+T\+U\+DE}!com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}}
+\subsubsection[{\texorpdfstring{C\+O\+L\+U\+M\+N\+\_\+\+L\+A\+T\+I\+T\+U\+DE}{COLUMN_LATITUDE}}]{\setlength{\rightskip}{0pt plus 5cm}final String com.\+example.\+memorism.\+memory.\+D\+B\+Helper.\+C\+O\+L\+U\+M\+N\+\_\+\+L\+A\+T\+I\+T\+U\+DE = \char`\"{}latitude\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_aef173dee96dd1d3292ed86bc1394fb37}{}\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_aef173dee96dd1d3292ed86bc1394fb37}
+
+
+Definition at line 37 of file D\+B\+Helper.\+java.
+
+\index{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}!C\+O\+L\+U\+M\+N\+\_\+\+L\+O\+N\+G\+I\+T\+U\+DE@{C\+O\+L\+U\+M\+N\+\_\+\+L\+O\+N\+G\+I\+T\+U\+DE}}
+\index{C\+O\+L\+U\+M\+N\+\_\+\+L\+O\+N\+G\+I\+T\+U\+DE@{C\+O\+L\+U\+M\+N\+\_\+\+L\+O\+N\+G\+I\+T\+U\+DE}!com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}}
+\subsubsection[{\texorpdfstring{C\+O\+L\+U\+M\+N\+\_\+\+L\+O\+N\+G\+I\+T\+U\+DE}{COLUMN_LONGITUDE}}]{\setlength{\rightskip}{0pt plus 5cm}final String com.\+example.\+memorism.\+memory.\+D\+B\+Helper.\+C\+O\+L\+U\+M\+N\+\_\+\+L\+O\+N\+G\+I\+T\+U\+DE = \char`\"{}longitude\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a853f90958b6e860ffa3fea8c315b7c26}{}\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a853f90958b6e860ffa3fea8c315b7c26}
+
+
+Definition at line 36 of file D\+B\+Helper.\+java.
+
+\index{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}!C\+O\+L\+U\+M\+N\+\_\+\+T\+I\+T\+LE@{C\+O\+L\+U\+M\+N\+\_\+\+T\+I\+T\+LE}}
+\index{C\+O\+L\+U\+M\+N\+\_\+\+T\+I\+T\+LE@{C\+O\+L\+U\+M\+N\+\_\+\+T\+I\+T\+LE}!com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}}
+\subsubsection[{\texorpdfstring{C\+O\+L\+U\+M\+N\+\_\+\+T\+I\+T\+LE}{COLUMN_TITLE}}]{\setlength{\rightskip}{0pt plus 5cm}final String com.\+example.\+memorism.\+memory.\+D\+B\+Helper.\+C\+O\+L\+U\+M\+N\+\_\+\+T\+I\+T\+LE = \char`\"{}title\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_ab96886bfdaf0e3551201f4e03f1e4ad0}{}\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_ab96886bfdaf0e3551201f4e03f1e4ad0}
+
+
+Definition at line 34 of file D\+B\+Helper.\+java.
+
+\index{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}!D\+A\+T\+A\+B\+A\+S\+E\+\_\+\+N\+A\+ME@{D\+A\+T\+A\+B\+A\+S\+E\+\_\+\+N\+A\+ME}}
+\index{D\+A\+T\+A\+B\+A\+S\+E\+\_\+\+N\+A\+ME@{D\+A\+T\+A\+B\+A\+S\+E\+\_\+\+N\+A\+ME}!com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}}
+\subsubsection[{\texorpdfstring{D\+A\+T\+A\+B\+A\+S\+E\+\_\+\+N\+A\+ME}{DATABASE_NAME}}]{\setlength{\rightskip}{0pt plus 5cm}final String com.\+example.\+memorism.\+memory.\+D\+B\+Helper.\+D\+A\+T\+A\+B\+A\+S\+E\+\_\+\+N\+A\+ME = \char`\"{}Memorism\+\_\+database.\+db\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a61a19ee13881d07c502373a34687d671}{}\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_a61a19ee13881d07c502373a34687d671}
+
+
+Definition at line 30 of file D\+B\+Helper.\+java.
+
+\index{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}!T\+A\+B\+L\+E\+\_\+\+N\+A\+ME@{T\+A\+B\+L\+E\+\_\+\+N\+A\+ME}}
+\index{T\+A\+B\+L\+E\+\_\+\+N\+A\+ME@{T\+A\+B\+L\+E\+\_\+\+N\+A\+ME}!com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper@{com\+::example\+::memorism\+::memory\+::\+D\+B\+Helper}}
+\subsubsection[{\texorpdfstring{T\+A\+B\+L\+E\+\_\+\+N\+A\+ME}{TABLE_NAME}}]{\setlength{\rightskip}{0pt plus 5cm}final String com.\+example.\+memorism.\+memory.\+D\+B\+Helper.\+T\+A\+B\+L\+E\+\_\+\+N\+A\+ME = \char`\"{}memory\+\_\+content\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_afb514eee57c4fe21a7c1b7c9c72747a0}{}\label{classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper_afb514eee57c4fe21a7c1b7c9c72747a0}
+
+
+Definition at line 31 of file D\+B\+Helper.\+java.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/farid/\+Android\+Studio\+Projects/\+Memorism/app/src/main/java/com/example/memorism/memory/\hyperlink{_d_b_helper_8java}{D\+B\+Helper.\+java}\end{DoxyCompactItemize}
