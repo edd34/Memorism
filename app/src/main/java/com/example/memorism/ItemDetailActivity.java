@@ -29,6 +29,7 @@ public class ItemDetailActivity extends AppCompatActivity {
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         FloatingActionButton fab_show_pic = (FloatingActionButton) findViewById(R.id.show_pic);
         final Intent intent = new Intent(this,MainMenu.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         final Intent intent_show_pic = new Intent(this,ShowPicture.class);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
