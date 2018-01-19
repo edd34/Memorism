@@ -107,10 +107,20 @@ public class MainMenu extends AppCompatActivity
             startActivity(intent);
 
 
-        } else if (id == R.id.nav_edit_memory) {
-            Intent intent = new Intent(this,take_photo.class);
-            startActivity(intent);
         } else if (id == R.id.nav_list_places) {
+
+            Intent intent;
+            if(MemoryContent.ITEMS.size()==0)
+            {
+                intent = new Intent(this,create_memory.class);
+            }else
+            {
+                intent = new Intent(this,ItemListActivity.class);
+            }
+            startActivity(intent);
+
+
+        }  else if (id == R.id.nav_list_trip) {
 
             Intent intent;
             if(MemoryContent.ITEMS.size()==0)
