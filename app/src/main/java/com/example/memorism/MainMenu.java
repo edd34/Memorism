@@ -56,7 +56,11 @@ public class MainMenu extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        mydb.getAllMemory();
+        if(MemoryContent.ITEMS.size()==0)
+        {
+            mydb.getAllMemory();    
+        }
+
     }
 
     @Override
