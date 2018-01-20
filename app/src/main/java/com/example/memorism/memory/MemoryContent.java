@@ -30,6 +30,7 @@ public class MemoryContent {
      */
     public static final Map<String, MemoryItem> ITEM_MAP = new HashMap<String, MemoryItem>();
 
+    public static String trip_name_prompted = "";
 
 
 

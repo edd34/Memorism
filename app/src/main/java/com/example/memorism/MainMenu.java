@@ -165,7 +165,7 @@ public class MainMenu extends AppCompatActivity
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                create_memory.trip_name_prompted = input.getText().toString();
+                MemoryContent.trip_name_prompted = input.getText().toString();
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
