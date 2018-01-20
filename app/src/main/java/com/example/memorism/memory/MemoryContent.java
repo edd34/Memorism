@@ -32,8 +32,8 @@ public class MemoryContent {
         mydb.insertMemoryIntoDB(item);
     }
 
-    public static void addItem(String date, String title, String details,double positionX, double positionY) {
-        MemoryItem tmp = new MemoryItem(date,title,details,positionX,positionY);
+    public static void addItem(String trip_name,String date, String title, String details,double positionX, double positionY) {
+        MemoryItem tmp = new MemoryItem(trip_name,date,title,details,positionX,positionY);
         ITEMS.add(tmp);
         ITEM_MAP.put(tmp.date, tmp);
 
@@ -63,13 +63,15 @@ public class MemoryContent {
      * A dummy item representing a piece of title.
      */
     public static class MemoryItem {
+        public String trip_name;
         public String date;
         public String title;
         public String details;
         public double latitude;
         public double longitude;
 
-        public MemoryItem(String date, String title, String details, double latitude, double longitude) {
+        public MemoryItem(String trip_name,String date, String title, String details, double latitude, double longitude) {
+            this.trip_name = trip_name;
             this.date = date;
             this.title = title;
             this.details = details;
@@ -78,6 +80,7 @@ public class MemoryContent {
         }
 
         public MemoryItem() {
+            this.trip_name = "trip";
             this.date = "today";
             this.title = "title";
             this.details = "details";
@@ -89,7 +92,7 @@ public class MemoryContent {
         public String toString() {
             return title;
         }
-
+        public void setTrip_name(String trip_name) {this.trip_name = trip_name;}
         public void setDate(String date)
         {
             this.date = date;
@@ -101,6 +104,7 @@ public class MemoryContent {
             this.longitude = longitude;
         }
 
+        public String getTrip_name() {return this.trip_name;}
         public String getDate()
         {
             return this.date;
