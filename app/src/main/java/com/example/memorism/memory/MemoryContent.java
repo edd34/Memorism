@@ -1,5 +1,12 @@
 package com.example.memorism.memory;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
+import android.text.InputType;
+import android.widget.EditText;
+
+import com.example.memorism.create_memory;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -118,4 +125,6 @@ public class MemoryContent {
             return (float) this.longitude;
         }
     }
+
+
 }

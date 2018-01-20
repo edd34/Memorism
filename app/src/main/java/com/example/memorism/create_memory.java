@@ -27,6 +27,7 @@ public class create_memory extends AppCompatActivity {
     double lon;
 
     public static String new_id = UUID.randomUUID().toString();
+    public static String trip_name_prompted = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,16 +82,12 @@ public class create_memory extends AppCompatActivity {
 
 
 
-                    MemoryContent.MemoryItem tmp_dummy = new MemoryContent.MemoryItem(new_id,memory_string_value,detail_string_value,lat,lon);
+                    MemoryContent.MemoryItem tmp_dummy = new MemoryContent.MemoryItem(trip_name_prompted,new_id,memory_string_value,detail_string_value,lat,lon);
 
                     MemoryContent.addItem(tmp_dummy);
 
                     Snackbar.make(view, "Memory "+memory_string_value + " saved !", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-
-
-
-
                 }
             };
         });

@@ -1,5 +1,10 @@
 package com.example.memorism;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
+import android.text.InputType;
+import android.widget.EditText;
+
 import java.util.Random;
 
 /**
@@ -14,4 +19,8 @@ public class misc_funct {
         float random = min + r.nextFloat() * (max - min);
         return random;
     }
+
+
+
+
 }
