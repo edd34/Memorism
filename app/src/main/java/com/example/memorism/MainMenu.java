@@ -109,7 +109,8 @@ public class MainMenu extends AppCompatActivity
 
         if(id == R.id.nav_create_trip)
         {
-
+            Intent intent = new Intent(this,create_trip.class);
+            startActivity(intent);
         } else if (id == R.id.nav_create_memory) {
             // Handle the camera action
             Intent intent = new Intent(this,create_memory.class);
@@ -132,7 +133,7 @@ public class MainMenu extends AppCompatActivity
         }  else if (id == R.id.nav_list_trip) {
 
             Intent intent;
-            intent = new Intent(this,ListTrip.class);
+            intent = new Intent(this,create_trip.class);
             startActivity(intent);
 
 

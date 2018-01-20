@@ -69,7 +69,7 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name=".ListTrip"></activity>
+        <activity android:name=".create_trip"></activity>
     </application>
 
 </manifest>
