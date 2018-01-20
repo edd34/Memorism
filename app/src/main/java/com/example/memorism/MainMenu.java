@@ -133,7 +133,8 @@ public class MainMenu extends AppCompatActivity
         }  else if (id == R.id.nav_list_trip) {
 
             Intent intent;
-            intent = new Intent(this,create_trip.class);
+            //intent = new Intent(this,create_trip.class);
+            intent = new Intent(this,TripListActivity.class);
             startActivity(intent);
 
 

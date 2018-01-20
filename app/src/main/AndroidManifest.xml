@@ -69,7 +69,8 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name=".create_trip"></activity>
+        <activity android:name=".create_trip" />
+        <activity android:name=".TripListActivity"></activity>
     </application>
 
 </manifest>
