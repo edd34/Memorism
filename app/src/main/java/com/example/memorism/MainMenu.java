@@ -101,7 +101,12 @@ public class MainMenu extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_create_memory) {
+        if(id == R.id.nav_create_trip)
+        {
+
+        }
+
+        else if (id == R.id.nav_create_memory) {
             // Handle the camera action
             Intent intent = new Intent(this,create_memory.class);
             startActivity(intent);
@@ -123,13 +128,7 @@ public class MainMenu extends AppCompatActivity
         }  else if (id == R.id.nav_list_trip) {
 
             Intent intent;
-            if(MemoryContent.ITEMS.size()==0)
-            {
-                intent = new Intent(this,create_memory.class);
-            }else
-            {
-                intent = new Intent(this,ItemListActivity.class);
-            }
+            intent = new Intent(this,ListTrip.class);
             startActivity(intent);
 
 

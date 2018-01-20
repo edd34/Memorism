@@ -3,7 +3,7 @@ package com.example.memorism;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class CreateTrip extends AppCompatActivity {
+public class ListTrip extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
