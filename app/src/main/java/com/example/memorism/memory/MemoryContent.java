@@ -70,6 +70,16 @@ public class MemoryContent {
     public static void removeItem(MemoryItem item) {
         ITEMS.remove(item);
         ITEM_MAP.remove(item.date,item);
+        mydb.deleteMemory(item.getDate());
+    }
+
+    public static void removeTrip(String name)
+    {
+        for (MemoryItem item:ITEMS) {
+            if(item.getTrip_name().equals(name)){
+                removeItem(item);
+            }
+        }
     }
 
     public static String makeDetails(MemoryItem item) {

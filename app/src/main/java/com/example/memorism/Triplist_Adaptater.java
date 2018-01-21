@@ -1,8 +1,11 @@
 package com.example.memorism;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -62,6 +65,33 @@ public class Triplist_Adaptater extends RecyclerView.Adapter<Triplist_Adaptater.
                     itemView.getContext().startActivity(m_itemListActivity);
                 }
 
+            });
+
+            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    AlertDialog.Builder builder;
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        builder = new AlertDialog.Builder(itemView.getContext(), android.R.style.Theme_Material_Dialog_Alert);
+                    } else {
+                        builder = new AlertDialog.Builder(itemView.getContext());
+                    }
+                    builder.setTitle("Delete trip")
+                            .setMessage("Are you sure you want to delete this entry : "+name.getText().toString()+"?")
+                            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    // continue with delete
+                                }
+                            })
+                            .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    // do nothing
+                                }
+                            })
+                            .setIcon(android.R.drawable.ic_dialog_alert)
+                            .show();
+                    return false;
+                }
             });
         }
 
