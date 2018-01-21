@@ -19,14 +19,6 @@ public class TripListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trip_list);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_trip);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         final RecyclerView recyclerView = (RecyclerView ) findViewById(R.id.trip_list);
         assert recyclerView != null;
