@@ -119,11 +119,6 @@ public class MainMenu extends AppCompatActivity
             intent = new Intent(this,create_trip.class);
             startActivity(intent);
         } else if (id == R.id.nav_create_memory) {
-
-
-
-
-
             if(MemoryContent.ITEMS.size() == 0)
             {
                 intent = new Intent(this,create_trip.class);

@@ -60,6 +60,22 @@ public class create_memory extends AppCompatActivity {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinnerChooseTrip.setAdapter(adapter);
         }
+        else if(activity.equals("MainMenu")){
+            if(MemoryContent.ITEMS.size()==0)
+            {
+                Intent intent_create_trip = new Intent(this,create_trip.class);
+                startActivity(intent_create_trip);
+            }
+            else
+            {
+                adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,MemoryContent.getAllTripName());
+                spinnerChooseTrip = (Spinner) findViewById(R.id.spinner);
+
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinnerChooseTrip.setAdapter(adapter);
+                spinnerChooseTrip.setSelection(MemoryContent.getAllTripName().size()-1);
+            }
+        }
         else
         {
             adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,MemoryContent.getAllTripName());

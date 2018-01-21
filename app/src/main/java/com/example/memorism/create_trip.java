@@ -28,8 +28,17 @@ public class create_trip extends AppCompatActivity {
             {
 
                 MemoryContent.trip_name_prompted= text.getText().toString();
-                intent_create_memory.putExtra("activity","create_trip");
-                startActivity(intent_create_memory);
+                if(MemoryContent.trip_name_prompted == "")
+                {
+
+                }else{
+                    intent_create_memory.putExtra("activity","create_trip");
+                    //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent_create_memory.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent_create_memory);
+                }
+
+
             }
         });
     }
