@@ -139,7 +139,7 @@ public class create_memory extends AppCompatActivity {
 
 
 
-                    MemoryContent.MemoryItem tmp_dummy = new MemoryContent.MemoryItem(MemoryContent.trip_name_prompted,new_id,memory_string_value,detail_string_value,lat,lon);
+                    MemoryContent.MemoryItem tmp_dummy = new MemoryContent.MemoryItem(spinnerChooseTrip.getSelectedItem().toString(),new_id,memory_string_value,detail_string_value,lat,lon);
 
                     MemoryContent.addItem(tmp_dummy);
 

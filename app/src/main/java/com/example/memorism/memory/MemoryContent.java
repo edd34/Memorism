@@ -37,7 +37,11 @@ public class MemoryContent {
         List<String> trip_name = new ArrayList<>();
 
         for (MemoryItem item:ITEMS) {
-            trip_name.add(item.getTrip_name());
+            if(!trip_name.contains(item.getTrip_name())){
+                trip_name.add(item.getTrip_name());
+            }
+
+
         }
         return trip_name;
     }
