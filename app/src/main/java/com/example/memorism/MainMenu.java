@@ -122,7 +122,7 @@ public class MainMenu extends AppCompatActivity
             Intent intent;
             if(MemoryContent.ITEMS.size()==0)
             {
-                intent = new Intent(this,create_memory.class);
+                intent = new Intent(this,create_trip.class);
             }else
             {
                 intent = new Intent(this,ItemListActivity.class);
@@ -133,8 +133,15 @@ public class MainMenu extends AppCompatActivity
         }  else if (id == R.id.nav_list_trip) {
 
             Intent intent;
-            //intent = new Intent(this,create_trip.class);
-            intent = new Intent(this,TripListActivity.class);
+
+            if(MemoryContent.ITEMS.size() == 0)
+            {
+                intent = new Intent(this,create_trip.class);
+            }else
+            {
+                intent = new Intent(this,TripListActivity.class);
+            }
+
             startActivity(intent);
 
 

@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.memorism.memory.MemoryContent;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,12 +35,12 @@ public class MyAdaptater extends RecyclerView.Adapter<MyAdaptater.MyViewHolder> 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
 
-        holder.display(list_trip_name.get(position));
+        holder.display(MemoryContent.getAllTripName().get(position));
     }
 
     @Override
     public int getItemCount() {
-        return list_trip_name.size();
+        return MemoryContent.getAllTripName().size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
