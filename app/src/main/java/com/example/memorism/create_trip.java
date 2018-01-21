@@ -21,6 +21,7 @@ public class create_trip extends AppCompatActivity {
         final EditText text = (EditText)findViewById(R.id.trip_name_input_string);
 
 
+
         button_createNewTrip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
