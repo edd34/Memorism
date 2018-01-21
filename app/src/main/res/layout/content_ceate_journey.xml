@@ -14,13 +14,10 @@
         android:id="@+id/textView_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="Memory name"
         app:layout_constraintBottom_toTopOf="@+id/memory_input"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,14 +25,11 @@
         android:id="@+id/memory_input"
         android:layout_width="344dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="82dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="82dp"
-        app:layout_constraintBottom_toTopOf="@+id/detail_input"
+        app:layout_constraintBottom_toTopOf="@+id/textView_detailMemory"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textView_title">
 
         <EditText
             android:id="@+id/memory_input_string"
@@ -50,27 +44,22 @@
         android:id="@+id/textView_detailMemory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="Details"
         app:layout_constraintBottom_toTopOf="@+id/detail_input"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/memory_input" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/detail_input"
         android:layout_width="312dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="305dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="58dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_select_the_trip"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/memory_input">
+        app:layout_constraintTop_toBottomOf="@+id/textView_detailMemory">
 
         <EditText
             android:id="@+id/detail_input_string"
@@ -80,20 +69,39 @@
             android:inputType="text" />
     </android.support.design.widget.TextInputLayout>
 
+    <TextView
+        android:id="@+id/textView_select_the_trip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please select the trip"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_input" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="194dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
         android:id="@+id/take_picture_view"
-        android:layout_width="265dp"
-        android:layout_height="224dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="151dp"
+        android:layout_height="126dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detail_input"
-        app:layout_constraintVertical_bias="0.107"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
         app:srcCompat="@drawable/ic_add_a_photo_black_24dp" />
+
 
 </android.support.constraint.ConstraintLayout>
