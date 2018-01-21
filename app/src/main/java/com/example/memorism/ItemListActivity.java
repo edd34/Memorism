@@ -67,7 +67,18 @@ public class ItemListActivity extends AppCompatActivity {
     }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView) {
-        recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(this, MemoryContent.ITEMS, mTwoPane));
+        String activity = getIntent().getExtras().getString("activity");
+
+        if(activity.equals("TripListActivity"))
+        {
+            recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(this, MemoryContent.getItemTrip(getIntent().getExtras().getString("trip_name")), mTwoPane));
+        }else if(activity.equals("MainMenu"))
+        {
+            recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(this, MemoryContent.ITEMS, mTwoPane));
+
+        } else {
+            recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(this, MemoryContent.ITEMS, mTwoPane));
+        }
     }
 
     public static class SimpleItemRecyclerViewAdapter

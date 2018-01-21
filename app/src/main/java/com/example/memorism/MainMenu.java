@@ -45,7 +45,9 @@ public class MainMenu extends AppCompatActivity
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.quick_add_memory);
         final Intent intent = new Intent(this,create_memory.class);
-        intent.putExtra("activity","MainMenu");
+        Bundle extras = new Bundle();
+        extras.putString("activity","MainMenu");
+        intent.putExtras(extras);
         fab.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -107,51 +109,51 @@ public class MainMenu extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        Bundle extras = new Bundle();
+        extras.putString("activity","MainMenu");
+
+        Intent intent;
+
         if(id == R.id.nav_create_trip)
         {
-            Intent intent = new Intent(this,create_trip.class);
-            intent.putExtra("activity","MainMenu");
+            intent = new Intent(this,create_trip.class);
             startActivity(intent);
         } else if (id == R.id.nav_create_memory) {
             // Handle the camera action
-            Intent intent = new Intent(this,create_memory.class);
-            intent.putExtra("activity","MainMenu");
+            intent = new Intent(this,create_memory.class);
             startActivity(intent);
 
 
         } else if (id == R.id.nav_list_places) {
 
-            Intent intent = null;
             if(MemoryContent.ITEMS.size()==0)
             {
                 intent = new Intent(this,create_trip.class);
-                intent.putExtra("activity","MainMenu");
             }else
             {
                 intent = new Intent(this,ItemListActivity.class);
-                intent.putExtra("activity","MainMenu");
             }
+            intent.putExtras(extras);
             startActivity(intent);
 
 
         }  else if (id == R.id.nav_list_trip) {
 
-            Intent intent;
 
             if(MemoryContent.ITEMS.size() == 0)
             {
                 intent = new Intent(this,create_trip.class);
             }else
             {
+
                 intent = new Intent(this,TripListActivity.class);
             }
-            intent.putExtra("activity","MainMenu");
+            intent.putExtras(extras);
             startActivity(intent);
 
 
         } else if (id == R.id.nav_show_map) {
-            Intent intent = new Intent(this,Show_Map.class);
-            intent.putExtra("activity","MainMenu");
+            intent = new Intent(this,Show_Map.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_share) {

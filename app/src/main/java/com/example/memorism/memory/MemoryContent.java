@@ -42,6 +42,18 @@ public class MemoryContent {
         return trip_name;
     }
 
+    public static List<MemoryItem> getItemTrip(String name)
+    {
+        List<MemoryItem> res = new ArrayList<>();
+        for (MemoryItem item:ITEMS) {
+            if(item.getTrip_name().equals(name)){
+                res.add(item);
+            }
+        }
+
+        return res;
+    }
+
     public static void addItem(MemoryItem item) {
         ITEMS.add(item);
         ITEM_MAP.put(item.date, item);

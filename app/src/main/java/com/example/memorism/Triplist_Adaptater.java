@@ -2,6 +2,7 @@ package com.example.memorism;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,8 +54,11 @@ public class Triplist_Adaptater extends RecyclerView.Adapter<Triplist_Adaptater.
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view){
+                    Bundle extras = new Bundle();
                     Intent m_itemListActivity = new Intent(itemView.getContext(),ItemListActivity.class);
-                    m_itemListActivity.putExtra("trip_name",name.getText().toString());
+                    extras.putString("activity","TripListActivity");
+                    extras.putString("trip_name",name.getText().toString());
+                    m_itemListActivity.putExtras(extras);
                     itemView.getContext().startActivity(m_itemListActivity);
                 }
 

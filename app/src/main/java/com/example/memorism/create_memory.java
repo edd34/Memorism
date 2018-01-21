@@ -47,9 +47,7 @@ public class create_memory extends AppCompatActivity {
         /*final Intent intent = getIntent();
         String activity = intent.getExtras().getString("activity");*/
         Intent intent = getIntent();
-        String activity = intent.getStringExtra("activity");
-        Log.e("activity value",activity);
-
+        String activity = getIntent().getExtras().getString("activity");
 
         if(activity.equals("create_trip"))
         {
