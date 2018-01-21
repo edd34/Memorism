@@ -64,6 +64,8 @@ public class MemoryContent {
         MemoryItem tmp = new MemoryItem(trip_name,date,title,details,positionX,positionY);
         ITEMS.add(tmp);
         ITEM_MAP.put(tmp.date, tmp);
+        mydb.insertMemoryIntoDB(tmp);
+
 
     }
 

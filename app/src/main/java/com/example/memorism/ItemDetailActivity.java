@@ -36,7 +36,6 @@ public class ItemDetailActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 MemoryContent.removeItem(ItemDetailFragment.mItem);
-
                 startActivity(intent);
 
             }

@@ -81,6 +81,10 @@ public class Triplist_Adaptater extends RecyclerView.Adapter<Triplist_Adaptater.
                             .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     // continue with delete
+                                    MemoryContent.removeTrip(name.getText().toString());
+                                    Intent intent = new Intent(itemView.getContext(), MainMenu.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    itemView.getContext().startActivity(intent);
                                 }
                             })
                             .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
