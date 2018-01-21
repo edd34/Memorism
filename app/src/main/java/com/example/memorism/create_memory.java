@@ -11,8 +11,11 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.memorism.memory.MemoryContent;
@@ -23,6 +26,9 @@ import java.util.UUID;
 
 public class create_memory extends AppCompatActivity {
 
+    private Spinner spinnerChooseTrip = null;
+    private TextView selectTrip;
+
     double lat;
     double lon;
 
@@ -32,6 +38,12 @@ public class create_memory extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ceate_journey);
+
+        spinnerChooseTrip = (Spinner) findViewById(R.id.spinner);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,MemoryContent.getAllTripName());
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerChooseTrip.setAdapter(adapter);
+
         new_id = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(new Date());
         ActivityCompat.requestPermissions(create_memory.this,new String[]{
                 Manifest.permission.ACCESS_FINE_LOCATION},123);
