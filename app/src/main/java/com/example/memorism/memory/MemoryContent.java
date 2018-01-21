@@ -32,7 +32,15 @@ public class MemoryContent {
 
     public static String trip_name_prompted = "";
 
+    public static List<String> getAllTripName()
+    {
+        List<String> trip_name = new ArrayList<>();
 
+        for (MemoryItem item:ITEMS) {
+            trip_name.add(item.getTrip_name());
+        }
+        return trip_name;
+    }
 
     public static void addItem(MemoryItem item) {
         ITEMS.add(item);
