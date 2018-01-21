@@ -10,6 +10,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -21,7 +22,9 @@ import android.widget.Toast;
 import com.example.memorism.memory.MemoryContent;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 public class create_memory extends AppCompatActivity {
@@ -39,11 +42,39 @@ public class create_memory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ceate_journey);
 
-        spinnerChooseTrip = (Spinner) findViewById(R.id.spinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,MemoryContent.getAllTripName());
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerChooseTrip.setAdapter(adapter);
-        spinnerChooseTrip.setSelection(MemoryContent.getAllTripName().size()-1);
+        ArrayAdapter<String> adapter;
+
+        /*final Intent intent = getIntent();
+        String activity = intent.getExtras().getString("activity");*/
+        Intent intent = getIntent();
+        String activity = intent.getStringExtra("activity");
+        Log.e("activity value",activity);
+
+
+        if(activity.equals("create_trip"))
+        {
+            List<String> m_Maliste = new ArrayList<String>();
+                m_Maliste.add(MemoryContent.trip_name_prompted);
+            adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,m_Maliste);
+
+            spinnerChooseTrip = (Spinner) findViewById(R.id.spinner);
+
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinnerChooseTrip.setAdapter(adapter);
+        }
+        else
+        {
+            adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,MemoryContent.getAllTripName());
+            spinnerChooseTrip = (Spinner) findViewById(R.id.spinner);
+
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinnerChooseTrip.setAdapter(adapter);
+            spinnerChooseTrip.setSelection(MemoryContent.getAllTripName().size()-1);
+        }
+
+
+
+
 
         new_id = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(new Date());
         ActivityCompat.requestPermissions(create_memory.this,new String[]{

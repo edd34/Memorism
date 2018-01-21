@@ -45,7 +45,7 @@ public class MainMenu extends AppCompatActivity
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.quick_add_memory);
         final Intent intent = new Intent(this,create_memory.class);
-
+        intent.putExtra("activity","MainMenu");
         fab.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -110,22 +110,26 @@ public class MainMenu extends AppCompatActivity
         if(id == R.id.nav_create_trip)
         {
             Intent intent = new Intent(this,create_trip.class);
+            intent.putExtra("activity","MainMenu");
             startActivity(intent);
         } else if (id == R.id.nav_create_memory) {
             // Handle the camera action
             Intent intent = new Intent(this,create_memory.class);
+            intent.putExtra("activity","MainMenu");
             startActivity(intent);
 
 
         } else if (id == R.id.nav_list_places) {
 
-            Intent intent;
+            Intent intent = null;
             if(MemoryContent.ITEMS.size()==0)
             {
                 intent = new Intent(this,create_trip.class);
+                intent.putExtra("activity","MainMenu");
             }else
             {
                 intent = new Intent(this,ItemListActivity.class);
+                intent.putExtra("activity","MainMenu");
             }
             startActivity(intent);
 
@@ -141,12 +145,13 @@ public class MainMenu extends AppCompatActivity
             {
                 intent = new Intent(this,TripListActivity.class);
             }
-
+            intent.putExtra("activity","MainMenu");
             startActivity(intent);
 
 
         } else if (id == R.id.nav_show_map) {
             Intent intent = new Intent(this,Show_Map.class);
+            intent.putExtra("activity","MainMenu");
             startActivity(intent);
 
         } else if (id == R.id.nav_share) {
