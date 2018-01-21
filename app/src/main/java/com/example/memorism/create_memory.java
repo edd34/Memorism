@@ -43,6 +43,7 @@ public class create_memory extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,MemoryContent.getAllTripName());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerChooseTrip.setAdapter(adapter);
+        spinnerChooseTrip.setSelection(MemoryContent.getAllTripName().size()-1);
 
         new_id = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(new Date());
         ActivityCompat.requestPermissions(create_memory.this,new String[]{

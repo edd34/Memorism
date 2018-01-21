@@ -79,12 +79,10 @@
         android:id="@+id/textView_select_the_trip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="23dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="315dp"
         android:text="Please select the trip"
-        app:layout_constraintBottom_toTopOf="@+id/textView_trip_name_spinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -95,9 +93,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/take_picture_view"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_select_the_trip" />
 
     <ImageView
@@ -110,23 +110,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_trip_name_spinner"
         app:srcCompat="@drawable/ic_add_a_photo_black_24dp" />
-
-    <TextView
-        android:id="@+id/textView_trip_name_spinner"
-        android:layout_width="312dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="22dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/take_picture_view"
-        app:layout_constraintEnd_toStartOf="@+id/spinner"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_select_the_trip" />
 
 
 </android.support.constraint.ConstraintLayout>
