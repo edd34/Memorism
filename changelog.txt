@@ -1,0 +1,119 @@
+dd70c2171c64d61c1389e1d37f920f05a170c08c removed useless floationg action button
+13bcb8f3cb571a2faea9c8ed7926eeda335353df As it is not possible to delete a trip, an alert dialog inform the user to remove manually all entry
+8b6655936da3aac28e0ac04b0ff2bef10f48171c fixed when creating a new memory, an alert dialog is created and user go to main menu automatically
+61b464b455b1334b6940816bf97e495c8e3990e5 Now a selected trip is correctly binded to a memory
+5e3469c65f4e43466bd403e4f03401042e47de9b fixed when launching create memory from main menu and database is not empty, allow to choose memory
+90365b8c61a118ddb265abfd96c34881d293a959 fixed : from main main if daabase is empty,create memory start create trip first
+4486cbd4d963a72c48bba6ae2d8f3f163fded452 fixed a bug : from main menu, activity create_memory is started with bundle
+0551d1c8c32c7f215dfe70dfa076ae5a1ff02f0e now possible to remove a memory and also a trip
+fa0860b51d3272a0f48b9a6080bd5fe619a681dd removed function alertbuild dialog
+ef1afce12843dfa909304574e75ec96dc4e14e16 fixed bug possible to launch list trip activity
+623132e1680c2594e2a7f2eeb830fd4e0e27f309 possible to start item list activity from Trip list adaptater activity
+78cba73f4f2ffb0f7c568edc09c402a0fa5f369b fixed bug create trip
+0e2fb12420923f81caf57efcc4822910cee8e7d7 now the spinner shows the last element
+6a921759a9146726cc822ff7177c62e87e72233e spinner implemented well
+9752eb4357e8cd12140fd8dba212efc8f3c17668 Refactoring MyAdapter : renamed to TripList_Adaptater
+ca6393e2ff2c54d7592ba036360493b0d6c1e41b spinner is added
+3e1e5d441d8b237ed3549b67384e753c72eab258 now get trip list, option menu list trip works fine
+b871502af69116d92808bb1b03e0be387da06b2e function getAllTripName() method created
+c4c1c0a861c5d39d3ea6cfebd9f0174b0daaa1cd an offset is added in top of the list trip layout activity
+639277f4deae0d1544cc1ea82c93978fc23f597f Recycler view work partially git statusgit statusgit statusgit statusgit statusgit statusgit statusgit statusgit statusgit statusgit statusgit statusgit statusgit statusgit statusgit statusgit status!
+b34ab22fda17cc851683f4c8b59bc0e26532da3f fixing some bug now have to implement somethings correctly
+b6930b1263b5c6438bae573aedb2c8b79bd4cc00 fixed a bug : not necessary to use an action bar
+7b745175bda14bb82b75f5f0b0b41ad95d459d0c trip list content xml layout created
+f611323f16b62d455f3f955b75ff63bc5bfbe005 TripList.xml layout example done
+d8155963b509e5d9ff7a147b25dc243d567df247 activity_trip_list layout done
+79de906cd3a381b388e2a8ddd21a05bf2f87af56 In activity create trip : trip_name_name_prompted is assigned to what the user has written on the relevant field
+2a82637a5b51c9831fff53feedc7022b4d7a7f37 Activity create trip is defined and also it's layout and from main menu clicking on create a trip bring the user to the activity
+0b96726dba7eff917720f1c7c43153931a9a1d48 var trip_name is moved to MemoryContent class
+e7b8cea094282983a8fa15ad9766cc5137caf709 Refactoring including trip_name completed
+185c47f56440d36f573bb59b8c621ad37d8aeb67 DB Helper updated
+b810c163f932524ebb10a7511b05aa7e7969cf1d MemoryContent class include the trip name
+70151428f34951a16b9f1e45966bb81c52b73d2e Input is now in plain text
+f35e160d83c751806cb932ee12eb4beb017d5fd4 The basic Dialog is implemented
+11563db2712006db91714f3b339a12968cbb9f58 In main menu, the first case is nav_create_trip
+f0957da036adf46f79bb8a1d662e7b9f750c6cf9 CreateTrip activity is renamed to ListTrip activity
+8811e319157cc471590f968b30c12208039939e3 Activity create_trip is created
+b7f07023103ae50a4407754ffa3d4ba19f57898c Some modification : * Item create trip added in main menu * ressource flight is associated * in main menu case create trip is taken in count
+bef49c58fe0d8b8c54053f6ceafca316d9f0978f Bug fixed : when removing it was possible to go back to the previous detail item
+b7bb85378bc466556d313e4c6d3036e20fcf973a The database is retrieved to ram only if the item list is empty
+71ae14992ee201a5c688fcdfcf72e3b185a49830 git ignore Doxygen/
+c4023ce9393e9f1954e5d3ade5cbcbc694ab7eb0 all position are shown in the map
+749ee9717107904190f1cc56705d71a8f68c0cf8 googleMap show Sydney location
+5d38d4f2ad686db5aab1ee7d2fd0f5167b8ac84b api key updated
+de8680721f8accc2b00a8239b422b83c6f409064 Doxygen documentation
+f7fe1d8291c99e2ecdf93292db59a3bae828968a Possible to save content
+d520980fbcb5440356e9e7d67918abc97cfecbc3 Some fix
+021ab7d5a1870b361c11b4e9e509dcd8edfc05cf Some fix
+c0042077f5eb2a5fe2c2768592fded39bf6bee38 Some modification
+b594c8e164451dc0455551971ea0070cbb0a15f5 Some modification
+fa68c16178da313184605b9474b6fae5c26dea2a Database success
+fa15044114f5658fa326adcf7721357a87f50e8d Modification
+572efdec5309606ac677662301c07e9f4ae796f2 added a file called dbhelper and string defined
+996c2d7a82aa61775cb23f508691906439059375 Database handler created
+fe6114451dd32a86b1a852f7bd3187dbf10dceb0 Getters and setters created for memoryitem
+5b2d01ac27267a8ff099fbc1c55141b35c6df80f Picture is rotated well
+a2dc99ff6cf070ec49527f0ba7a7a347f82d6632 try catch and show picture ok
+d772acdc0767deb97688c792fb96069b203445dc Fix start intent show picture
+3086accd3a28316ee75057adaf986f48861a70cd fab_show_pic setup
+b42d472c3a1e0008fa69c9a630188fbe4548f498 Imageview constrained
+7d53a9f470545b31479d7187a25615d1889f255d Imageview added
+676fbfa510c3e7494e3548c033fcfa8010819baa Activity show picture created
+b69f04af838afa74dcc038231180d8d97cf68e89 Added a floating action button in order to show the picture
+d8a432105dd6e4704d1654ecde1ee3a0505003f5 Possible to create a take a picture from activity take picture
+322eca9064c3c7fd356bb1c7e712f5373987508c Coarse location no longer needed and added permission android hardware camera2.full
+fd2343b47ad517cde7f36d1518b675230f117ace onlongclick and on click fix + add permission to camera
+63761bb1eb114a3af1e2ed3ab38dab21e12e0e9c Correctly retrieved lattitude and longitude
+e3b9a9d95074c3270d0b1954e86538fa38e13a13 Location works fine
+e4da141100f51caa6de6f4afbb9ae33696034564 Changed targetSDK version -> 25
+8b59c1f19c3c078fca659aa4fcb5326057cb6379 Added on manifest required permissions
+5931654b56107ae02618b53d4f4a21cf53aaacba fixed onlongclick take_picture_view
+ddec4d1909bb23925ae9b8aea4789c73770e31a5 onclick and onlongclick are set for picture image on create create memory view
+50b95fb284eecbc1cce20714e37241abe7a81815 Layout of create item changed
+c527544e9d38741d9fea608a803fa1e714c34510 makeDetails method refactored, and ItemDetails Fragment is formated, new class misc funct and a random float generator
+e204b3c538feab2488503b7ae5d74a930fcd0dd7 attribut content of structure memory item changed to title
+e97e644b7fea190c728e8d49b7ee5c5ac91f3f64 class DummyItem renamed to MemoryItem
+00421eac6c5f5d49725983449f23c779d689cec3 change a package name
+e39105c14e71ed7bbc6f7c0d61d0f33b3aff5ffe Fixed an id name
+ed5d4ed39399660f926018ae672ae92656e962ff Layout content main view modified
+f326f43c23515b89d6a46f0cee417780cca652c8 In DummyItem structure, attribut id is now date
+8558044234f345311d779d571de7658733bccd3d Launcher icon changed
+7bbd2d3418e359bc3ec6fce84b291fa961950eee class DummyContent renamed to MemoryContent
+163d555e9553464c88f61e16e21af4e7c7e88d01 possible on activity take picture to take a picture and to store it !
+95820d57419de9340a814c49567e698413994124 added on android manifest the permission to write on external storage
+9bf079362a9c3e23cedba68ed68b653183b40103 Possible to take picture on take photo activity
+dd73b4312e00ceb3029822cc9ff1c2ada19914ba Request feature on android manifest added
+36e3914b9123424ea0d142ee62b3739e34057809 Now possible to remove item
+92698f81d817b9e7fdd843bb573c6117eb91d327 Snackbar message when adding a memory and take photo activity created
+cee4ce19ec5f4ef2cf69d5df712958903f165389 Launcher Icon is changed
+dc98524f898ae22ccbfee4c72741b48c56a50d87 Merging .gitignore
+d22a88bc950f9130886382745b50c2de39805279 It is possible to create a memory from main activity
+7e5ace9e25c35707eed7401a6185a9c034e83985 Message icon replaced by a note add icon
+3f9ec20ba17b0c5d62d8bc67c1f564a9a92b98cb Trying to add a remove item
+6007d60709cf88704d4d2842d5be8fa315e8967c Add icon remove
+913e327c459f9787f94ab41351033d318344bbbf Correctly possible to add a memory
+21a18fe73231cdb30a873f87b0df6da9abe34204 some add and modification
+7dae8b4119519bbc26789be437a4acd6ce227b1a to avoid a bug when item list is void there is a statement in main menu
+885874153a49b7c7679aa0a2fba2d9c2bb7824ed * Fixed on main menu : start item_ list_activity * addItem is a public method
+2e56950dfd3336e205901e042b819887eb71708d Renamed create memory content widgets
+3d9c025cc0fd2f8de67d217d9478ce5bbe2df8ff Layout create memory done
+0ced85f3f1583a80203078cabc2adc6224d44fc3 On click on list view, the new activity shows up
+5566b83f6542e7fb81a37e4ea8be3f9c2a8acb8d Added succesfully a list activity
+4a5a51f288e4b76d35db35cbcf7111a5acb1b5ec Added a show map activity
+95b18f08d79287131552fddb1d727135d0ac1dd7 Changed message button to add button
+1cdbb8f141d3ca920f1d160876ee37d0c2e3a3db Renamed travel to memory
+742ee57fce62c2bcc2a90b95fc2fe953754e487f Style.xml fixed and changed Activity create journey title name
+32b9b9215bcba68a48c816276da0eeb869590900 Style.xml changed so status bar is shown when launching create_journey activity
+9d333e57af73383ce641baf50985f275502d9cd2 activity name fixed
+1a9f1a6f197b10d93602b6fd80e5ef12d3d0f02b Basic activity created
+49de47e72bdada802c4767f8dc984fe49a5a7602 Application name chaged : Memorism Home -> Memorism
+7bba4f15845253271e49bf0fbaf56c0b0872c913 removed unused vector image asets
+b879c19f075d73e9f51616b674988837eb681afe Menu updated with items : * Create journey * Edit a journey * List places * Show map
+0791974bb7bd7ad97dc68484104b6642f9ffa02a Create journey item added in app drawer
+b3941ae581b536404cf51f8fd46a55128c2ac3c8 Menu drawer modified : * removed : the tools item * renamed : take a picture, import from gallery, feedbacks
+dd6de861d16e50ac30065f778b501cee476adc31 main menu content : * added : a welcome message * added : a short introduction to the application
+5335a96ab0dd6cd749ef06b5d93efd9f26f3a5ea value string title activity main menu is now Memorism Home
+d7d7926bb4017bdabd675cea0f71c43352cb6d40 nav header name of app and mail changed !
+ba4eb12bb218f8610971639d3ea085c53cd1db9b Initial app drawer activity
+d965670f8d4c5f5a56a608f3bf893131be082fbe Initial commit
+a3f3e6618cea494d4f9b74bfd848af53733c5b3f Initial commit
