@@ -76,15 +76,16 @@ public class Triplist_Adaptater extends RecyclerView.Adapter<Triplist_Adaptater.
                     } else {
                         builder = new AlertDialog.Builder(itemView.getContext());
                     }
-                    builder.setTitle("Delete trip")
-                            .setMessage("Are you sure you want to delete this entry : "+name.getText().toString()+"?")
+                    builder.setTitle("Delete trip features come soon !")
+                            .setMessage("In order to delete this entry: "+name.getText().toString()+", you have to remove all places associated !")
                             .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     // continue with delete
-                                    MemoryContent.removeTrip(name.getText().toString());
+                                    /*String trip_name = name.getText().toString();
+                                    MemoryContent.removeTrip(trip_name);
                                     Intent intent = new Intent(itemView.getContext(), MainMenu.class);
                                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                    itemView.getContext().startActivity(intent);
+                                    itemView.getContext().startActivity(intent);*/
                                 }
                             })
                             .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
