@@ -22,7 +22,9 @@ import static com.example.memorism.memory.MemoryContent.ITEMS;
  * Created by farid on 27/12/17.
  */
 
-
+/**
+ * @brief this class provide method allowing interaction with the database
+ */
 public class DBHelper extends SQLiteOpenHelper {
 
 
@@ -42,6 +44,10 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
+    /**
+     * @brief this method is called when the class is instantiated
+     * @param db is the database we are going to create
+     */
     @Override
     public void onCreate(SQLiteDatabase db) {
         // TODO Auto-generated method stub
@@ -72,6 +78,13 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
+    /**
+     * @brief this method is called when the version of sql has been upgraded.
+     * When it occurs, all the table is dropped and another is created
+     * @param db : the name of the database upgraded
+     * @param oldVersion
+     * @param newVersion
+     */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // TODO Auto-generated method stub
@@ -79,12 +92,22 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    /**
+     * @brief this function removed all entries on the database and create another
+     * @param db : the database you are going to reset
+     */
     public void reset_dataBase(SQLiteDatabase db)
     {
         db.execSQL("DROP TABLE IF EXISTS "+ TABLE_NAME);
         onCreate(db);
     }
 
+
+    /**
+     * @brief This method insert an item to the database
+     * @param item : this is a sort of structure containing all relevant data associated to a place visited
+     * @return true when it's done
+     */
     public boolean insertMemoryIntoDB(MemoryContent.MemoryItem item) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -98,6 +121,11 @@ public class DBHelper extends SQLiteOpenHelper {
         return true;
     }
 
+    /**
+     * @brief this function extract one single entry from the database
+     * @param date : the item are time_stamped, so data is the relevant information that can allow us to retrieve an element
+     * @return this_item : is an item extracted from the database
+     */
     public MemoryContent.MemoryItem getItemFromDB(String date) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res =  db.rawQuery( "select * from "+TABLE_NAME+" where "+COLUMN_DATE +"="+date, null );
@@ -111,12 +139,26 @@ public class DBHelper extends SQLiteOpenHelper {
         return this_item;
     }
 
+    /**
+     * @brief this function return the number of row in the database
+     * @return int numRow : is the number of rows in the database
+     */
     public int numberOfRows(){
         SQLiteDatabase db = this.getReadableDatabase();
         int numRows = (int) DatabaseUtils.queryNumEntries(db, TABLE_NAME);
         return numRows;
     }
 
+    /**
+     * @brief this function update an element in the database
+     * @param trip_name is the new name of the trip
+     * @param date is the new date of the memory
+     * @param newTitle is the new title of the memory
+     * @param newDetails is the new details of the memory
+     * @param newLatitude is the new latitude of the memory
+     * @param newLongitude is the new longitude of the memory
+     * @return true when it is done
+     */
     public boolean updateMemory (String trip_name, String date, String newTitle, String newDetails, float newLatitude, float newLongitude) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -130,6 +172,11 @@ public class DBHelper extends SQLiteOpenHelper {
         return true;
     }
 
+    /**
+     * this method remove
+     * @param date
+     * @return
+     */
     public Integer deleteMemory (String date) {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_NAME,
