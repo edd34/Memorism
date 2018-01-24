@@ -6,9 +6,12 @@ var searchData=
   ['column_5flatitude',['COLUMN_LATITUDE',['../d6/d1c/classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper.html#aef173dee96dd1d3292ed86bc1394fb37',1,'com::example::memorism::memory::DBHelper']]],
   ['column_5flongitude',['COLUMN_LONGITUDE',['../d6/d1c/classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper.html#a853f90958b6e860ffa3fea8c315b7c26',1,'com::example::memorism::memory::DBHelper']]],
   ['column_5ftitle',['COLUMN_TITLE',['../d6/d1c/classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper.html#ab96886bfdaf0e3551201f4e03f1e4ad0',1,'com::example::memorism::memory::DBHelper']]],
+  ['column_5ftrip_5fname',['COLUMN_TRIP_NAME',['../d6/d1c/classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper.html#ab557aa558be80f4031b07cdb9afb716d',1,'com::example::memorism::memory::DBHelper']]],
   ['com',['com',['../d8/dee/namespacecom.html',1,'']]],
   ['create_5fmemory',['create_memory',['../d8/d9d/classcom_1_1example_1_1memorism_1_1create__memory.html',1,'com::example::memorism']]],
   ['create_5fmemory_2ejava',['create_memory.java',['../d8/dbb/create__memory_8java.html',1,'']]],
+  ['create_5ftrip',['create_trip',['../d8/dc4/classcom_1_1example_1_1memorism_1_1create__trip.html',1,'com::example::memorism']]],
+  ['create_5ftrip_2ejava',['create_trip.java',['../de/dc9/create__trip_8java.html',1,'']]],
   ['example',['example',['../db/d16/namespacecom_1_1example.html',1,'com']]],
   ['memorism',['memorism',['../d7/d8f/namespacecom_1_1example_1_1memorism.html',1,'com::example']]],
   ['memory',['memory',['../dc/da9/namespacecom_1_1example_1_1memorism_1_1memory.html',1,'com::example::memorism']]]

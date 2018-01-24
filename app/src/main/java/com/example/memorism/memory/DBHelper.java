@@ -173,7 +173,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     /**
-     * this method remove
+     * @brief this method remove a memort from the database
      * @param date
      * @return
      */
@@ -184,6 +184,9 @@ public class DBHelper extends SQLiteOpenHelper {
                 new String[] { date });
     }
 
+    /**
+     * @brief this function is used to load all information from the database to the memory
+     */
     public void getAllMemory() {
 
         SQLiteDatabase db = this.getReadableDatabase();

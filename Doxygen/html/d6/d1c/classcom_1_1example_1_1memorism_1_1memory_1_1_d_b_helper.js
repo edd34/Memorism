@@ -9,5 +9,5 @@ var classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper =
     [ "onCreate", "d6/d1c/classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper.html#af116d080f66582b43bf7cc392862f1cd", null ],
     [ "onUpgrade", "d6/d1c/classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper.html#a10e47b5b5978e7f89ec326cf3782c2b0", null ],
     [ "reset_dataBase", "d6/d1c/classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper.html#a5a10d27ab67b8b21fe6a4791138596a2", null ],
-    [ "updateMemory", "d6/d1c/classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper.html#aa40fc6dae948e51c155f23695c2af9c6", null ]
+    [ "updateMemory", "d6/d1c/classcom_1_1example_1_1memorism_1_1memory_1_1_d_b_helper.html#a9a95933b868716d78333cff41127b1c9", null ]
 ];
