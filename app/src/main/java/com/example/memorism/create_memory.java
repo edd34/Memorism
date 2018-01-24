@@ -102,22 +102,12 @@ public class create_memory extends AppCompatActivity {
         final Intent intent_take = new Intent(this,take_photo.class);
 
         ImageView take_show_picture = (ImageView) findViewById(R.id.take_picture_view);
-        take_show_picture.setOnLongClickListener(new View.OnLongClickListener() {
-                                                     @Override
-                                                     public boolean onLongClick(View v) {
-                                                         startActivity(intent_take);
-                                                         return true;
-                                                     }
-                                                 }
-
-
-        );
 
         take_show_picture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar.make(v, "Hey long click to open the camera !", Snackbar.LENGTH_LONG)
-                        .show();
+
+                startActivity(intent_take);
             }
         });
 
