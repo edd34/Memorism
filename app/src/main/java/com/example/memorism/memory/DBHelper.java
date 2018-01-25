@@ -201,7 +201,7 @@ public class DBHelper extends SQLiteOpenHelper {
             this_item.setDate(res.getString(res.getColumnIndex(COLUMN_DATE)));
             this_item.setTitle(res.getString(res.getColumnIndex(COLUMN_TITLE)));
             this_item.setDetails(res.getString(res.getColumnIndex(COLUMN_DETAILS)));
-            this_item.setPosition(res.getDouble(res.getColumnIndex(COLUMN_LATITUDE)),res.getDouble(res.getColumnIndex(COLUMN_LATITUDE)));
+            this_item.setPosition(res.getDouble(res.getColumnIndex(COLUMN_LATITUDE)),res.getDouble(res.getColumnIndex(COLUMN_LONGITUDE)));
             Log.d("\nitem","\nitem date"+ this_item.getDate());
             ITEMS.add(this_item);
             ITEM_MAP.put(this_item.date, this_item);
