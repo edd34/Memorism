@@ -36,9 +36,12 @@ public class Show_Map extends AppCompatActivity implements OnMapReadyCallback {
             for(MemoryContent.MemoryItem currentItem : MemoryContent.ITEMS)
             {
                currentPosition = new LatLng(currentItem.getLatitude(),currentItem.getLongitude()) ;
-                googleMap.addMarker(new MarkerOptions().position(currentPosition).title(currentItem.getTitle()));
+                googleMap.addMarker(new MarkerOptions().position(currentPosition).title(currentItem.getTitle()).draggable(true));
             }
             googleMap.moveCamera(CameraUpdateFactory.newLatLng(currentPosition));
         }
     }
+
+
+
 }
